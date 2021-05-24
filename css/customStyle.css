@@ -28,7 +28,7 @@ header .nav__wrapper .nav__ul {
 }
 
 .mint__bg__top {
-  background: url("../img/assets/Bg.png") no-repeat center;
+  background: url("../img/assets/bg_vector.png") no-repeat center;
   height: 1500px;
 }
 
@@ -203,5 +203,6 @@ section.section__saying__slider .saying__swiper::after {
   left: -138px;
   width: 232px;
   height: 325px;
+  z-index: -2;
 }
 /*# sourceMappingURL=CustomStyle.css.map */
