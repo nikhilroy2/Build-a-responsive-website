@@ -168,3 +168,19 @@ section.section__saying__slider {
     background: url('../img/Vector_angle.png') no-repeat;
   }
 }
+
+.section__realState{
+  .img__valleys__wrapper{
+   height: 500px;
+    img{
+      height: 450px;
+    }
+  }
+  [alt="realState_vector"]{
+    position: absolute;
+    bottom: -144px;
+    left: -138px;
+    width: 232px;
+    height: 325px;
+  }
+}

@@ -73,6 +73,14 @@ body {
   font-size: 45px;
 }
 
+.font_size_20 {
+  font-size: 20px;
+}
+
+.font_size_42 {
+  font-size: 42px;
+}
+
 .bg_orange {
   background: #ff623f;
 }
@@ -104,6 +112,10 @@ body {
 
 .text_blackGray {
   color: #413c48;
+}
+
+.text_black7 {
+  color: #516677;
 }
 
 .text_gray {

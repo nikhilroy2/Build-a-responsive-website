@@ -188,4 +188,20 @@ section.section__saying__slider .saying__swiper::after {
   height: 107px;
   background: url("../img/Vector_angle.png") no-repeat;
 }
+
+.section__realState .img__valleys__wrapper {
+  height: 500px;
+}
+
+.section__realState .img__valleys__wrapper img {
+  height: 450px;
+}
+
+.section__realState [alt="realState_vector"] {
+  position: absolute;
+  bottom: -144px;
+  left: -138px;
+  width: 232px;
+  height: 325px;
+}
 /*# sourceMappingURL=CustomStyle.css.map */
