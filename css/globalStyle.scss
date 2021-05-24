@@ -48,8 +48,17 @@ body {
 .font_size_18{
     font-size: 18px;
 }
+.font_size_140{
+  font-size: 140px
+}
+.font_size_30{
+  font-size: 30px;
+}
 .bg_orange {
   background: #ff623f;
+}
+.text_orange{
+  color: #ff623f;
 }
 .content_shadow {
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 1));
@@ -60,11 +69,17 @@ body {
 .text_title {
   color: #342b50;
 }
+.text_blackGray{
+  color: #413C48;
+}
 .text_gray {
   color: #a5adb6;
 }
 .text_gray2 {
   color: #717d8a;
+}
+.text_gray3{
+  color: #8F8F8F;
 }
 .text_black8{
     color: rgba(0, 0, 0, 0.82);

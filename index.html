@@ -213,7 +213,7 @@
                 <div class="row">
                     <div class="col-12">
                         <!-- Swiper -->
-                        <div class="swiper-container mySwiper pb-3 pb-md-5">
+                        <div class="swiper-container swiper__driven pb-3 pb-md-5">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide h-100  rounded_45">
                                     <div class="col__wrapper h-100 rounded_45">
@@ -456,7 +456,79 @@
                 </div>
             </div>
         </section>
-        <section></section>
+        <section class="section__saying__slider">
+            <div class="container-xxl">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="col__wrapper">
+                            <h2 class=" text_title font_size_60 text-uppercase">
+                                <span class="family_panton">
+                                    WHAT OTHERS ARE SAYING
+                                </span>
+                            </h2>
+                            <h3 class="text-uppercase font_size_25 text_gray font-weight-bold family_panton">
+                                Reviews FROM SATISIFIED CLIENTS
+                            </h3>
+                            <hr style="width: 222px; border: 1px solid #269A9A;" class="d-block">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="col__wrapper">
+                            <b class="font_size_140 text_orange font-weight-bold d-inline-block mt-n5">
+                                ,,
+                            </b>
+                            <h3 class="font_size_30 text_blackGray font-weight-bold family_panton">
+                                NEED A REVIEW
+                            </h3>
+                            <br><br><br><br>
+                            <br><br><br>
+                            <hr style="border: 1px solid #2ED2A6; width: 387px" class="d-block">
+                            <br>
+
+                            <h3 class="font_size_30 text-black font-weight-bold family_panton">
+                                BETH WALLER
+                            </h3>
+                            <h3 class="font_size_35 family_panton font-weight-bold text_gray3">
+                                FRONT ROYAL, VA
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="col__wrapper">
+                            <!-- Swiper -->
+                            <div class="swiper-container saying__swiper py-3 py-md-5">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="./img/review_img1.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/review_img2.png" alt="">
+
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/review_img2.png" alt="">
+
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/review_img2.png" alt="">
+
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/review_img2.png" alt="">
+
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
         <section></section>
     </main>
     <footer></footer>
@@ -475,7 +547,7 @@
 
     <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper(".mySwiper", {
+        new Swiper(".swiper__driven", {
             slidesPerView: 1,
             spaceBetween: 10,
             pagination: {
@@ -495,6 +567,16 @@
                     slidesPerView: 3,
                     spaceBetween: 50,
                 },
+            },
+        });
+
+        new Swiper(".saying__swiper", {
+            slidesPerView: "auto",
+            centeredSlides: true,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
         });
     </script>
