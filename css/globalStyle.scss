@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Panton;
+  src: url(../font/panton/Panton-BlackCaps.otf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// ..............global classes.....................Start
+.family_panton {
+  font-family: Panton;
+}
+.cup {
+  cursor: pointer;
+}
+.overflow_hidden {
+  overflow: hidden;
+}
+.active_nav {
+  color: #ffc0b1 !important;
+}
+.font_size_18 {
+  font-size: 18px;
+}
+.font_size_65 {
+  font-size: 65px;
+}
+.font_size_35 {
+  font-size: 35px;
+}
+.font_size_60 {
+  font-size: 60px;
+}
+.font_size_25 {
+  font-size: 25px;
+}
+.font_size_16 {
+  font-size: 16px;
+}
+.font_size_50{
+    font-size: 50px;
+}
+.font_size_18{
+    font-size: 18px;
+}
+.bg_orange {
+  background: #ff623f;
+}
+.content_shadow {
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 1));
+}
+.z_1000 {
+  z-index: 1000;
+}
+.text_title {
+  color: #342b50;
+}
+.text_gray {
+  color: #a5adb6;
+}
+.text_gray2 {
+  color: #717d8a;
+}
+.text_black8{
+    color: rgba(0, 0, 0, 0.82);
+}
+.rounded_45{
+    border-radius: 45px;
+}
+.w_h_133 {
+  width: 133px;
+  height: 133px;
+}
+.border_orange{
+    border: 1px solid #FE5E3B;
+}
+.line_144 {
+  line-height: 144%;
+}
+.text_unset{
+    text-transform: unset;
+}
+// ..............global classes.....................End

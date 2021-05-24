@@ -1,0 +1,105 @@
+header {
+  max-width: 2000px;
+  margin: auto;
+  position: relative;
+  .design_triangle {
+    width: 1058.06px;
+    height: 934.52px;
+    background: url("../img/logo_trinagle.png") no-repeat;
+    pointer-events: none;
+    img {
+      width: 341px;
+      height: 155px;
+      margin-left: 197px;
+      margin-top: 19p;
+    }
+  }
+  .nav__wrapper {
+    width: calc(100% - 1058.06px);
+    margin-left: -100px;
+    .nav__ul {
+      margin-left: -100px;
+    }
+  }
+}
+.mint__bg__top {
+  background: url("../img/assets/Bg.png") no-repeat center;
+  height: 1500px;
+  .col__wrapper {
+    margin-top: 350px;
+  }
+}
+.section__why__mint {
+  margin-top: -280px;
+  .mint__title {
+    position: relative;
+    &::after {
+      content: attr(data-mint-title);
+      position: absolute;
+      top: -65%;
+      left: -27%;
+      // transform: translateX(-50%) translateY(-50%);
+      opacity: 0.04;
+      color: #000000;
+      width: 100%;
+      height: 100%;
+      font-size: 95px;
+      white-space: nowrap;
+      font-family: inherit;
+    }
+  }
+}
+
+// ......................SwiperJs........................
+
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-pagination-bullet{
+  background: #1B7D7D;
+  opacity: 1;
+  transition: .5s;
+  &.swiper-pagination-bullet-active{
+    background: #EF5E3E;
+    width: 18px;
+    border-radius: 45px;
+  }
+}
+.section_bg_slider{
+  background: url('../img/assets/BG_Slider.png') no-repeat center/100% 100%;
+  height: 1800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 350px;
+  margin-top: -350px;
+}
