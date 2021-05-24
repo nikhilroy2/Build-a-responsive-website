@@ -139,15 +139,24 @@ section.section__saying__slider {
     max-height: 450px;
   }
 
-  .saying__swiper{
+  .saying__swiper {
     position: relative;
-    &::before{
-      content: '';
+    &::before {
+      content: "";
       top: -70px;
       left: 70px;
-      background: url('../img/Vector_slider.png') no-repeat;
+      background: url("../img/Vector_slider.png") no-repeat;
       width: 145.58px;
       height: 192.11px;
+      position: absolute;
+    }
+    &::after {
+      content: "";
+      bottom: 0px;
+      left: -70px;
+      background: url("../img/Polygon_slider.png") no-repeat;
+      width: 312.25px;
+      height: 312.25px;
       position: absolute;
     }
   }

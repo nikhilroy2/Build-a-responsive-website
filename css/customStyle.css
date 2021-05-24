@@ -155,12 +155,22 @@ section.section__saying__slider .saying__swiper {
 }
 
 section.section__saying__slider .saying__swiper::before {
-  content: '';
+  content: "";
   top: -70px;
   left: 70px;
   background: url("../img/Vector_slider.png") no-repeat;
   width: 145.58px;
   height: 192.11px;
+  position: absolute;
+}
+
+section.section__saying__slider .saying__swiper::after {
+  content: "";
+  bottom: 0px;
+  left: -70px;
+  background: url("../img/Polygon_slider.png") no-repeat;
+  width: 312.25px;
+  height: 312.25px;
   position: absolute;
 }
 /*# sourceMappingURL=CustomStyle.css.map */
