@@ -130,15 +130,15 @@ section.section__saying__slider .swiper-slide {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 section.section__saying__slider .swiper-slide {
-  width: 60%;
+  width: 70%;
 }
 
 section.section__saying__slider .swiper-slide img {
@@ -147,7 +147,7 @@ section.section__saying__slider .swiper-slide img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  max-height: 450px;
+  max-height: 500px;
 }
 
 section.section__saying__slider .saying__swiper {
@@ -172,5 +172,20 @@ section.section__saying__slider .saying__swiper::after {
   width: 312.25px;
   height: 312.25px;
   position: absolute;
+}
+
+.angle__vector {
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.angle__vector::after {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: 0;
+  width: 107px;
+  height: 107px;
+  background: url("../img/Vector_angle.png") no-repeat;
 }
 /*# sourceMappingURL=CustomStyle.css.map */

@@ -69,12 +69,24 @@ body {
   font-size: 30px;
 }
 
+.font_size_45 {
+  font-size: 45px;
+}
+
 .bg_orange {
   background: #ff623f;
 }
 
 .text_orange {
   color: #ff623f;
+}
+
+.text_success {
+  color: #24A6A2;
+}
+
+.bg_success {
+  background: #24A6A2;
 }
 
 .content_shadow {
@@ -121,6 +133,10 @@ body {
 
 .border_orange {
   border: 1px solid #fe5e3b;
+}
+
+.border_success {
+  border: 1px solid #26A2A0;
 }
 
 .line_144 {
