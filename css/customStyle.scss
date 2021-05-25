@@ -155,6 +155,32 @@ section.section__saying__slider {
     }
   }
 }
+.swiper-button-next:after,
+.swiper-button-prev:after{
+  font-family: Panton;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  color: #FFB039;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(30px 50px 90px rgba(0, 0, 0, 0.94));
+  margin: 0 25px;
+  font-weight: 300;
+}
+.swiper-button-next::after{
+  content: '>';
+  right: 5px;
+}
+.swiper-button-prev::after{
+  content: '<';
+  left: 25px;
+  z-index: 333;
+
+}
 .angle__vector{
   position: relative;
   background: rgba(255, 255, 255, 0.8);
@@ -183,5 +209,22 @@ section.section__saying__slider {
     width: 232px;
     height: 325px;
     z-index: -2;
+  }
+}
+footer{
+  position: relative;
+  .design__oval{
+    position: absolute;
+    left: 0;
+    bottom: 15%;
+  }
+  .design__poly{
+    position: absolute;
+    right: 0;
+    top: -45%;
+    height: 600px;
+    img{
+      height: 100%;
+    }
   }
 }
