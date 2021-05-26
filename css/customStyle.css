@@ -74,7 +74,7 @@ header .nav__wrapper {
 
 @media (max-width: 991px) {
   header .nav__wrapper .navbar-nav {
-    background: #00A38C;
+    background: #00a38c;
   }
 }
 
@@ -89,21 +89,54 @@ header .nav__wrapper .nav__ul {
 }
 
 .header__bg__angles {
-  background-position-y: top;
-  height: 1500px;
+  min-height: 1500px;
 }
 
 .header__bg__angles.header__bg__angles--vector {
   background: url("../img/assets/bg_vector.png") no-repeat center;
+  background-position-y: top;
 }
 
 .header__bg__angles.header__bg__angles--top {
   background: url("../img/assets/Bg_top.png") no-repeat center;
+  background-position-y: top;
+}
+
+.header__bg__angles .accordion-button:after {
+  content: "\f054";
+  color: #ff623f;
+}
+
+.header__bg__angles .accordion-button:not(.collapsed):after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.header__bg__angles .accordion-item {
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+}
+
+.header__bg__angles .accordion-item .accordion-header button.accordion-button {
+  min-height: 130px;
+}
+
+@media (max-width: 991px) {
+  .header__bg__angles .accordion-item .accordion-header button.accordion-button {
+    min-height: 80px;
+  }
+}
+
+@media (max-width: 991px) and (max-width: 767px) {
+  .header__bg__angles .accordion-item .accordion-header button.accordion-button {
+    min-height: 50px;
+  }
 }
 
 @media (max-width: 767px) {
   .header__bg__angles {
-    height: 500px;
+    min-height: 500px;
   }
 }
 

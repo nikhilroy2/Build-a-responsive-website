@@ -24,6 +24,9 @@ body {
 .active_nav {
   color: #ffc0b1 !important;
 }
+.bg_transparent{
+  background: transparent;
+}
 .font_size_65 {
   font-size: 65px;
   @media (max-width: 991px) {
@@ -132,6 +135,18 @@ body {
 .bg_footer {
   background: #174343;
 }
+.text_title_footer{
+  color: #9EFFF0;
+}
+.text_facebook{
+  color: #546CE9!important;
+}
+.text_twitter{
+  color: #31A8FF!important;
+}
+.text_dribbble{
+  color: #EB5091!important;
+}
 .bg_success {
   background: #24a6a2;
 }
@@ -142,7 +157,7 @@ body {
   z-index: 1000;
 }
 .text_title {
-  color: #342b50;
+  color: #342b50!important;
 }
 .text_blackGray {
   color: #413c48;
@@ -165,12 +180,19 @@ body {
 .text_black8 {
   color: rgba(0, 0, 0, 0.82);
 }
+.rounded_10{
+  border-radius: 10px;
+}
 .rounded_45 {
   border-radius: 45px;
 }
 .w_h_133 {
   width: 133px;
   height: 133px;
+}
+.social_size{
+  width: 40px;
+  height: 40px;
 }
 .space_h_500 {
   height: 500px;
