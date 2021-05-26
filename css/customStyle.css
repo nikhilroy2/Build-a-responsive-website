@@ -537,13 +537,13 @@ footer .design__poly img {
           box-shadow: 0px 0px 0px 25px rgba(195, 191, 195, 0.747) !important;
 }
 
-.section__our__office .rounder__draw {
+.rounder__draw {
   position: absolute;
   top: -74px;
   left: -65px;
 }
 
-.section__our__office .rounder__orange {
+.rounder__orange {
   position: absolute;
   top: -74px;
   right: -65px;

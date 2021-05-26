@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
 }
-body{
+body {
   overflow-x: hidden;
 }
 @font-face {
@@ -27,7 +27,7 @@ body {
 .active_nav {
   color: #ffc0b1 !important;
 }
-.bg_transparent{
+.bg_transparent {
   background: transparent;
 }
 .font_size_65 {
@@ -52,7 +52,7 @@ body {
   font-size: 60px;
   @media (max-width: 991px) {
     font-size: 45px;
-    @media(max-width: 767px){
+    @media (max-width: 767px) {
       font-size: 35px;
     }
   }
@@ -61,7 +61,7 @@ body {
   font-size: 25px;
   @media (max-width: 991px) {
     font-size: 18px;
-    @media(max-width: 767px){
+    @media (max-width: 767px) {
       font-size: 15px;
     }
   }
@@ -76,7 +76,7 @@ body {
   font-size: 50px;
   @media (max-width: 991px) {
     font-size: 40px;
-    @media(max-width: 767px){
+    @media (max-width: 767px) {
       font-size: 30px;
     }
   }
@@ -103,7 +103,7 @@ body {
   font-size: 45px;
   @media (max-width: 991px) {
     font-size: 30px;
-    @media(max-width: 767px){
+    @media (max-width: 767px) {
       font-size: 25px;
     }
   }
@@ -138,23 +138,23 @@ body {
 .bg_footer {
   background: #174343;
 }
-.text_title_footer{
-  color: #9EFFF0;
+.text_title_footer {
+  color: #9efff0;
 }
-.text_facebook{
-  color: #546CE9!important;
+.text_facebook {
+  color: #546ce9 !important;
 }
-.text_twitter{
-  color: #31A8FF!important;
+.text_twitter {
+  color: #31a8ff !important;
 }
-.text_dribbble{
-  color: #EB5091!important;
+.text_dribbble {
+  color: #eb5091 !important;
 }
 .bg_success {
   background: #24a6a2;
 }
-.bg_checkmark{
-  background: #1B8382;
+.bg_checkmark {
+  background: #1b8382;
 }
 .content_shadow {
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 1));
@@ -163,7 +163,7 @@ body {
   z-index: 1000;
 }
 .text_title {
-  color: #342b50!important;
+  color: #342b50 !important;
 }
 .text_blackGray {
   color: #413c48;
@@ -186,7 +186,7 @@ body {
 .text_black8 {
   color: rgba(0, 0, 0, 0.82);
 }
-.rounded_10{
+.rounded_10 {
   border-radius: 10px;
 }
 .rounded_45 {
@@ -196,11 +196,11 @@ body {
   width: 133px;
   height: 133px;
 }
-.social_size{
+.social_size {
   width: 40px;
   height: 40px;
 }
-.checkmarch_size{
+.checkmarch_size {
   width: 95px;
   height: 95px;
 }
@@ -222,14 +222,14 @@ body {
 .text_unset {
   text-transform: unset;
 }
-.dashed_hr{
+.dashed_hr {
   border: 1px dashed #000000;
   opacity: 0.2;
-  height: 0px!important;
+  height: 0px !important;
   margin: 25px 0;
 }
-.scale_half{
-  transform: scale(.5);
+.scale_half {
+  transform: scale(0.5);
 }
 
 // ..............global classes.....................End
