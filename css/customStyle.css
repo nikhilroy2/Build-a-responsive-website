@@ -88,24 +88,31 @@ header .nav__wrapper .nav__ul {
   }
 }
 
-.mint__bg__top {
-  background: url("../img/assets/bg_vector.png") no-repeat center;
+.header__bg__angles {
   background-position-y: top;
   height: 1500px;
 }
 
+.header__bg__angles.header__bg__angles--vector {
+  background: url("../img/assets/bg_vector.png") no-repeat center;
+}
+
+.header__bg__angles.header__bg__angles--top {
+  background: url("../img/assets/Bg_top.png") no-repeat center;
+}
+
 @media (max-width: 767px) {
-  .mint__bg__top {
+  .header__bg__angles {
     height: 500px;
   }
 }
 
-.mint__bg__top .col__wrapper {
+.header__bg__angles .col__wrapper {
   margin-top: 350px;
 }
 
 @media (max-width: 767px) {
-  .mint__bg__top .col__wrapper {
+  .header__bg__angles .col__wrapper {
     margin-top: 150px;
   }
 }
