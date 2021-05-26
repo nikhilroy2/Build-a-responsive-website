@@ -332,3 +332,22 @@ footer {
     }
   }
 }
+.form_outline_custom{
+  background: #F6F6F6;
+  input, select, textarea{
+    border: 2px solid transparent!important;
+    &::placeholder{
+      color: #6B6B6B!important;
+    }
+    &:focus{
+      background: transparent;
+      border: 2px solid #05DFC0!important;
+      &::placeholder{
+        color: #000;
+      }
+    }
+  }
+  .form-notch{
+    display: none!important;
+  }
+}

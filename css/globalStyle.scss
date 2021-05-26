@@ -150,6 +150,9 @@ body {
 .bg_success {
   background: #24a6a2;
 }
+.bg_checkmark{
+  background: #1B8382;
+}
 .content_shadow {
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 1));
 }
@@ -194,6 +197,10 @@ body {
   width: 40px;
   height: 40px;
 }
+.checkmarch_size{
+  width: 95px;
+  height: 95px;
+}
 .space_h_500 {
   height: 500px;
   @media (max-width: 991px) {
@@ -212,4 +219,11 @@ body {
 .text_unset {
   text-transform: unset;
 }
+.dashed_hr{
+  border: 1px dashed #000000;
+  opacity: 0.2;
+  height: 0px!important;
+  margin: 25px 0;
+}
+
 // ..............global classes.....................End

@@ -438,4 +438,53 @@ footer .design__poly img {
     top: -23%;
   }
 }
+
+.form_outline_custom {
+  background: #F6F6F6;
+}
+
+.form_outline_custom input, .form_outline_custom select, .form_outline_custom textarea {
+  border: 2px solid transparent !important;
+}
+
+.form_outline_custom input::-webkit-input-placeholder, .form_outline_custom select::-webkit-input-placeholder, .form_outline_custom textarea::-webkit-input-placeholder {
+  color: #6B6B6B !important;
+}
+
+.form_outline_custom input:-ms-input-placeholder, .form_outline_custom select:-ms-input-placeholder, .form_outline_custom textarea:-ms-input-placeholder {
+  color: #6B6B6B !important;
+}
+
+.form_outline_custom input::-ms-input-placeholder, .form_outline_custom select::-ms-input-placeholder, .form_outline_custom textarea::-ms-input-placeholder {
+  color: #6B6B6B !important;
+}
+
+.form_outline_custom input::placeholder, .form_outline_custom select::placeholder, .form_outline_custom textarea::placeholder {
+  color: #6B6B6B !important;
+}
+
+.form_outline_custom input:focus, .form_outline_custom select:focus, .form_outline_custom textarea:focus {
+  background: transparent;
+  border: 2px solid #05DFC0 !important;
+}
+
+.form_outline_custom input:focus::-webkit-input-placeholder, .form_outline_custom select:focus::-webkit-input-placeholder, .form_outline_custom textarea:focus::-webkit-input-placeholder {
+  color: #000;
+}
+
+.form_outline_custom input:focus:-ms-input-placeholder, .form_outline_custom select:focus:-ms-input-placeholder, .form_outline_custom textarea:focus:-ms-input-placeholder {
+  color: #000;
+}
+
+.form_outline_custom input:focus::-ms-input-placeholder, .form_outline_custom select:focus::-ms-input-placeholder, .form_outline_custom textarea:focus::-ms-input-placeholder {
+  color: #000;
+}
+
+.form_outline_custom input:focus::placeholder, .form_outline_custom select:focus::placeholder, .form_outline_custom textarea:focus::placeholder {
+  color: #000;
+}
+
+.form_outline_custom .form-notch {
+  display: none !important;
+}
 /*# sourceMappingURL=CustomStyle.css.map */

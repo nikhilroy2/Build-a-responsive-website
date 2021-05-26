@@ -233,6 +233,10 @@ body {
   background: #24a6a2;
 }
 
+.bg_checkmark {
+  background: #1B8382;
+}
+
 .content_shadow {
   -webkit-filter: drop-shadow(2px 2px 2px black);
           filter: drop-shadow(2px 2px 2px black);
@@ -292,6 +296,11 @@ body {
   height: 40px;
 }
 
+.checkmarch_size {
+  width: 95px;
+  height: 95px;
+}
+
 .space_h_500 {
   height: 500px;
 }
@@ -316,5 +325,12 @@ body {
 
 .text_unset {
   text-transform: unset;
+}
+
+.dashed_hr {
+  border: 1px dashed #000000;
+  opacity: 0.2;
+  height: 0px !important;
+  margin: 25px 0;
 }
 /*# sourceMappingURL=globalStyle.css.map */
