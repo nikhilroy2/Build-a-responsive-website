@@ -72,16 +72,16 @@ header {
   .accordion-button:not(.collapsed):after {
     transform: rotate(90deg);
   }
-  .accordion-item{
+  .accordion-item {
     border-radius: 10px;
     overflow: hidden;
     background: white;
     .accordion-header {
       button.accordion-button {
         min-height: 130px;
-        @media(max-width: 991px){
+        @media (max-width: 991px) {
           min-height: 80px;
-          @media(max-width: 767px){
+          @media (max-width: 767px) {
             min-height: 50px;
           }
         }
@@ -332,22 +332,33 @@ footer {
     }
   }
 }
-.form_outline_custom{
-  background: #F6F6F6;
-  input, select, textarea{
-    border: 2px solid transparent!important;
-    &::placeholder{
-      color: #6B6B6B!important;
+.form_outline_custom {
+  background: #f6f6f6;
+  input,
+  select,
+  textarea {
+    border: 2px solid transparent !important;
+    &::placeholder {
+      color: #6b6b6b !important;
     }
-    &:focus{
+    &:focus {
       background: transparent;
-      border: 2px solid #05DFC0!important;
-      &::placeholder{
+      border: 2px solid #05dfc0 !important;
+      &::placeholder {
         color: #000;
       }
     }
   }
-  .form-notch{
-    display: none!important;
+  .form-notch {
+    display: none !important;
+  }
+}
+[alt="poly_left_angle"] {
+  position: absolute;
+  left: 0;
+  bottom: -45%;
+  @media (max-width: 991px) {
+    height: 700px;
+    bottom: 0%;
   }
 }

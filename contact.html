@@ -106,9 +106,9 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-7 mb-3">
-                        <div class="w-100 mt-3 mt-md-5 mb-3">
-                            <ul class="list-group bg-white px-3 rounded_45 shadow-1  py-3">
+                    <div class="col-lg-7 mb-3 h-auto">
+                        <div class="w-100 mt-3 mt-md-5 mb-3 h-100">
+                            <ul class="list-group bg-white h-100 px-3 rounded_45 shadow-1  py-3">
                                 <li class="list-group-item border-0 bg_transparent px-md-4">
                                     <div class="d-flex mt-3 mt-md-4">
                                         <div
@@ -213,51 +213,49 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-5 mb-3">
-                        <div class="w-100 mt-3 mt-md-5 mb-3">
-                            <form action="" method="post" class="bg-white shadow-1 rounded_45 px-3 px-md-4 py-3 py-md-5">
+                    <div class="col-lg-5 mb-3 h-auto">
+                        <div class="w-100 mt-3 mt-md-5 mb-3 h-100">
+                            <form action="" method="post"
+                                class="bg-white shadow-1 h-100 rounded_45 px-3 px-md-4 py-3 py-md-5">
                                 <div
                                     class="form-outline form_outline_custom mb-4 border-0 shadow-0 rounded-3 outline-0">
                                     <i class="far fa-user trailing"></i>
                                     <input type="text"
                                         class="form-control px-3 px-md-4 form-icon-trailing border-0 shadow-0 outline-0 p-3"
-                                        placeholder="Name" />
+                                        placeholder="Name" name="name" />
                                 </div>
                                 <div
                                     class="form-outline form_outline_custom mb-4 border-0 shadow-0 rounded-3 outline-0">
                                     <i class="far fa-paper-plane trailing"></i>
                                     <input type="email"
                                         class="form-control px-3 px-md-4 form-icon-trailing border-0 shadow-0 outline-0 p-3"
-                                        placeholder="Email" />
+                                        placeholder="Email" name="email" />
                                 </div>
                                 <div
                                     class="form-outline form_outline_custom mb-4 border-0 shadow-0 rounded-3 outline-0">
                                     <i class="fas fa-phone-alt trailing"></i>
                                     <input type="number"
                                         class="form-control px-3 px-md-4 form-icon-trailing border-0 shadow-0 outline-0 p-3"
-                                        placeholder="Phone" />
+                                        placeholder="Phone" name="phone" />
                                 </div>
                                 <div
                                     class="form-outline form_outline_custom mb-4 border-0 shadow-0 rounded-3 outline-0">
+                                    <input type="hidden" class="form-control d-none">  <!-- for validatoin class -->
                                     <i class="fas fa-map-marker-alt trailing"></i>
-                                    <div class="form-group">
-
-                                        <select
-                                            class=" form-control px-3 px-md-4 form-icon-trailing border-0 shadow-0 outline-0 p-3">
-                                            <option selected disabled>Inquiry Type</option>
+                                        <select class="form-control px-3 px-md-4 form-icon-trailing border-0 shadow-0 outline-0 p-3">
+                                            <option selected disabled value="0">Inquiry Type</option>
                                             <option value="1"> Inquiry 1</option>
                                             <option value="2"> Inquiry 2</option>
                                             <option value="3">Inquiry 3</option>
                                             <option value="4"> Inquiry 4</option>
                                         </select>
-                                    </div>
                                 </div>
                                 <div
                                     class="form-outline form_outline_custom mb-4 border-0 shadow-0 rounded-3 outline-0">
                                     <i class="far fa-envelope trailing" style="top: 15%"></i>
                                     <textarea
                                         class="form-control px-3 px-md-4 form-icon-trailing border-0 shadow-0 outline-0 p-3"
-                                        rows="8" placeholder="Message">Message</textarea>
+                                        rows="8" placeholder="Message" name="message">Message</textarea>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit"
@@ -270,6 +268,60 @@
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+        <section class="mt-3 mt-md-5 position-relative">
+            <br><br><br>
+            <img src="./img/poly_left_angle.png" alt="poly_left_angle">
+            <div class="container-xxl">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="col__wrapper">
+                            <h2 class="font_size_60 family_panton text_uppercase text_title text-center">
+                                Our OffIce
+                            </h2>
+                            <dl class="text-center">
+                                <dd class="family_panton font_size_25 text_title mb-5 ">
+                                    <div class="d-inline-flex ">
+                                        <i class="fas fa-map-marker-alt  text_orange me-2 d-inline-block mt-2  "></i>
+                                        <span class="text-start">
+                                            Mint Management group <br>
+                                            116 e Main St , <br>
+                                            Front Royal, va 22630
+                                        </span>
+                                    </div>
+                                </dd>
+                                <dd class="family_panton font_size_25 mb-5 text_title text-start">
+                                    <div class="d-inline-flex ">
+                                        <i class="fas fa-map-marker-alt  text_orange me-2 d-inline-block mt-2  "></i>
+                                        <div class="text-start">
+                                            540.692.3650 <br>
+                                            <span class="text_orange">
+                                                Tenants/Investors
+                                            </span>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+
+                            <br><br><br><br>
+                            <div class="d-flex justify-content-center">
+                                <hr style="width: 200px; height: 11px;">
+                            </div>
+                            <br>
+                            <h3 class="text-center font_weight_normal family_panton text-black font_size_60">
+                                NEED MAP <br> HERE
+
+                                <br>
+                                <br>
+                                <br>
+                                THEN LIVE <br> GOOGLE <br> REVIEWS
+                                <br><br><br><br><br><br><br>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

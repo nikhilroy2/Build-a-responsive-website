@@ -440,51 +440,84 @@ footer .design__poly img {
 }
 
 .form_outline_custom {
-  background: #F6F6F6;
+  background: #f6f6f6;
 }
 
-.form_outline_custom input, .form_outline_custom select, .form_outline_custom textarea {
+.form_outline_custom input,
+.form_outline_custom select,
+.form_outline_custom textarea {
   border: 2px solid transparent !important;
 }
 
-.form_outline_custom input::-webkit-input-placeholder, .form_outline_custom select::-webkit-input-placeholder, .form_outline_custom textarea::-webkit-input-placeholder {
-  color: #6B6B6B !important;
+.form_outline_custom input::-webkit-input-placeholder,
+.form_outline_custom select::-webkit-input-placeholder,
+.form_outline_custom textarea::-webkit-input-placeholder {
+  color: #6b6b6b !important;
 }
 
-.form_outline_custom input:-ms-input-placeholder, .form_outline_custom select:-ms-input-placeholder, .form_outline_custom textarea:-ms-input-placeholder {
-  color: #6B6B6B !important;
+.form_outline_custom input:-ms-input-placeholder,
+.form_outline_custom select:-ms-input-placeholder,
+.form_outline_custom textarea:-ms-input-placeholder {
+  color: #6b6b6b !important;
 }
 
-.form_outline_custom input::-ms-input-placeholder, .form_outline_custom select::-ms-input-placeholder, .form_outline_custom textarea::-ms-input-placeholder {
-  color: #6B6B6B !important;
+.form_outline_custom input::-ms-input-placeholder,
+.form_outline_custom select::-ms-input-placeholder,
+.form_outline_custom textarea::-ms-input-placeholder {
+  color: #6b6b6b !important;
 }
 
-.form_outline_custom input::placeholder, .form_outline_custom select::placeholder, .form_outline_custom textarea::placeholder {
-  color: #6B6B6B !important;
+.form_outline_custom input::placeholder,
+.form_outline_custom select::placeholder,
+.form_outline_custom textarea::placeholder {
+  color: #6b6b6b !important;
 }
 
-.form_outline_custom input:focus, .form_outline_custom select:focus, .form_outline_custom textarea:focus {
+.form_outline_custom input:focus,
+.form_outline_custom select:focus,
+.form_outline_custom textarea:focus {
   background: transparent;
-  border: 2px solid #05DFC0 !important;
+  border: 2px solid #05dfc0 !important;
 }
 
-.form_outline_custom input:focus::-webkit-input-placeholder, .form_outline_custom select:focus::-webkit-input-placeholder, .form_outline_custom textarea:focus::-webkit-input-placeholder {
+.form_outline_custom input:focus::-webkit-input-placeholder,
+.form_outline_custom select:focus::-webkit-input-placeholder,
+.form_outline_custom textarea:focus::-webkit-input-placeholder {
   color: #000;
 }
 
-.form_outline_custom input:focus:-ms-input-placeholder, .form_outline_custom select:focus:-ms-input-placeholder, .form_outline_custom textarea:focus:-ms-input-placeholder {
+.form_outline_custom input:focus:-ms-input-placeholder,
+.form_outline_custom select:focus:-ms-input-placeholder,
+.form_outline_custom textarea:focus:-ms-input-placeholder {
   color: #000;
 }
 
-.form_outline_custom input:focus::-ms-input-placeholder, .form_outline_custom select:focus::-ms-input-placeholder, .form_outline_custom textarea:focus::-ms-input-placeholder {
+.form_outline_custom input:focus::-ms-input-placeholder,
+.form_outline_custom select:focus::-ms-input-placeholder,
+.form_outline_custom textarea:focus::-ms-input-placeholder {
   color: #000;
 }
 
-.form_outline_custom input:focus::placeholder, .form_outline_custom select:focus::placeholder, .form_outline_custom textarea:focus::placeholder {
+.form_outline_custom input:focus::placeholder,
+.form_outline_custom select:focus::placeholder,
+.form_outline_custom textarea:focus::placeholder {
   color: #000;
 }
 
 .form_outline_custom .form-notch {
   display: none !important;
+}
+
+[alt="poly_left_angle"] {
+  position: absolute;
+  left: 0;
+  bottom: -45%;
+}
+
+@media (max-width: 991px) {
+  [alt="poly_left_angle"] {
+    height: 700px;
+    bottom: 0%;
+  }
 }
 /*# sourceMappingURL=CustomStyle.css.map */
