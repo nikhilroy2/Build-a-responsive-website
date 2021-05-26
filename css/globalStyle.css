@@ -333,4 +333,9 @@ body {
   height: 0px !important;
   margin: 25px 0;
 }
+
+.scale_half {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
 /*# sourceMappingURL=globalStyle.css.map */
