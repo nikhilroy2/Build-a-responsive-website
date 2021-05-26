@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mint2</title>
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <!-- globalStyle -->
     <link rel="stylesheet" href="./css/globalStyle.css">
     <!-- customStyle -->
@@ -110,7 +112,13 @@
                         <div class="w-100 mt-3 mt-md-5 mb-3 h-100">
                             <ul class="list-group bg-white h-100 px-3 rounded_45 shadow-1  py-3">
                                 <li class="list-group-item border-0 bg_transparent px-md-4">
-                                    <img src="./img/videoplay.png" alt="videoplay" class="w-100">
+
+                                    <div class="video_player_top position-relative">
+                                        <button class="btn">
+                                            <i class="fas fa-play"></i>
+                                        </button>
+                                        <img src="./img/videoplay.png" alt="videoplay" class="w-100">
+                                    </div>
                                 </li>
                                 <li class="list-group-item border-0 bg_transparent px-md-4 mt-3">
                                     <p class="text-uppercase text_gray2 family_panton font_size_18">
@@ -212,9 +220,8 @@
             </div>
         </section>
 
-        <section class="mt-3 mt-md-5 position-relative">
+        <section class="mt-3 mt-md-5 position-relative section__our__office">
             <br><br><br>
-            <img src="./img/poly_left_angle.png" alt="poly_left_angle">
             <div class="container-xxl">
                 <div class="row">
                     <div class="col-12">
@@ -222,52 +229,212 @@
                             <h2 class="font_size_60 family_panton text_uppercase text_title text-center">
                                 Our OffIce
                             </h2>
-                            <dl class="text-center">
-                                <dd class="family_panton font_size_25 text_title mb-5 ">
-                                    <div class="d-inline-flex ">
-                                        <i class="fas fa-map-marker-alt  text_orange me-2 d-inline-block mt-2  "></i>
-                                        <span class="text-start">
-                                            Mint Management group <br>
-                                            116 e Main St , <br>
-                                            Front Royal, va 22630
-                                        </span>
-                                    </div>
-                                </dd>
-                                <dd class="family_panton font_size_25 mb-5 text_title text-start">
-                                    <div class="d-inline-flex ">
-                                        <i class="fas fa-map-marker-alt  text_orange me-2 d-inline-block mt-2  "></i>
-                                        <div class="text-start">
-                                            540.692.3650 <br>
-                                            <span class="text_orange">
-                                                Tenants/Investors
-                                            </span>
-                                        </div>
-                                    </div>
-                                </dd>
-                            </dl>
+                            <h4 class="font_size_25 text_gray family_panton text_uppercase text-center">
+                                open communication and managed risk
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col__drawer position-relative">
+                        <img src="./img/rounder_draw.png" alt="rounder_draw" class="rounder__draw">
+                        <img src="./img/rounder_orange.png" alt="rounder_orange" class="rounder__orange">
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                    <div class="col mb-3 h-auto">
+                        <div class="col__wrapper h-100">
+                            <div class="card text-left shadow-4 rounded_45 h-100">
+                                <img class="card-img-top w_h_133 rounded-circle mx-auto my-2"
+                                    src="./img/chat_system.png" alt="">
+                                <div class="card-body px-2">
+                                    <h3
+                                        class="card-title mb-md-4 text-uppercase font_size_25 text-black text-center family_panton">
+                                        Transparent Communication
+                                    </h3>
+                                    <p
+                                        class="card-text font_size_16 px-3 text-uppercase font-weight-bold family_panton line_144 text-center text_gray2">
+                                        Our innovative technology and instant accessibility makes it easy for you to
+                                        communicate with us, at any time and from any place.
+                                        <br>
+                                        <br>
 
-                            <br><br><br><br>
-                            <div class="d-flex justify-content-center">
-                                <hr style="width: 200px; height: 11px;">
+                                        Log onto your owner portal, and you’ll get all the information you need, from
+                                        repair requests to income statements and expense reports.
+                                    </p>
+                                </div>
                             </div>
-                            <br>
-                            <h3 class="text-center font_weight_normal family_panton text-black font_size_60">
-                                NEED MAP <br> HERE
-
-                                <br>
-                                <br>
-                                <br>
-                                THEN LIVE <br> GOOGLE <br> REVIEWS
-                                <br><br><br><br><br><br><br>
+                        </div>
+                    </div>
+                    <div class="col mb-3 h-auto">
+                        <div class="col__wrapper h-100">
+                            <div class="card text-left shadow-4 rounded_45 h-100">
+                                <img class="card-img-top w_h_133 rounded-circle mx-auto my-2"
+                                    src="./img/system_system.png" alt="">
+                                <div class="card-body px-2">
+                                    <h3
+                                        class="card-title mb-md-4 text-uppercase font_size_25 text-black text-center family_panton">
+                                        Expert Maintenance
+                                    </h3>
+                                    <p
+                                        class="card-text font_size_16 text-uppercase font-weight-bold px-3 family_panton line_144 text-center text_gray2">
+                                        Our in-house maintenance crew (mint-men) takes care of everything from fixing a
+                                        minor water leak to completing a major overhaul.
+                                        <br><br>
+                                        Our team is licensed, insured, and professional, ensuring that all your
+                                        maintenance needs are covered.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3 h-auto">
+                        <div class="col__wrapper h-100">
+                            <div class="card text-left shadow-4 rounded_45 h-100">
+                                <img class="card-img-top w_h_133 rounded-circle mx-auto my-2" src="./img/like_like.png"
+                                    alt="">
+                                <div class="card-body px-2">
+                                    <h3
+                                        class="card-title mb-md-4 text-uppercase font_size_25 text-black text-center family_panton">
+                                        Risk-Free Leasing
+                                    </h3>
+                                    <p
+                                        class="card-text font_size_16 text-uppercase font-weight-bold family_panton line_144 text-center text_gray2 px-3">
+                                        Our leasing agents are licensed, experienced, and gifted when it comes to
+                                        marketing your home and showing it to prospective tenants.
+                                        <br><br>
+                                        We’ll keep your vacancy costs to a minimum by attracting and screening high
+                                        quality tenants who pay rent on time, take care of your home, and follow the
+                                        terms of the lease agreement.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section__saying__slider mb-5 mt-4 mt-md-5 pb-5 position-relative">
+            <img src="./img/poly_left_angle.png" alt="poly_left_angle">
+            <div class="container-xxl">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="col__wrapper">
+                            <h2 class=" text_title font_size_60 text-uppercase">
+                                <span class="family_panton">
+                                    WHAT OTHERS ARE SAYING
+                                </span>
+                            </h2>
+                            <h3 class="text-uppercase font_size_25 text_gray font-weight-bold family_panton">
+                                Reviews FROM SATISIFIED CLIENTS
                             </h3>
+                            <hr style="width: 222px; border: 1px solid #269A9A;" class="d-block">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-lg-7">
+                        <div class="col__wrapper">
+                            <b class="font_size_140 text_orange font-weight-bold d-inline-block mt-n5">
+                                ,,
+                            </b>
+                            <h3 class="font_size_30 text_blackGray font-weight-bold family_panton">
+                                NEED A REVIEW
+                            </h3>
+                            <br><br><br><br>
+                            <br><br><br>
+                            <hr style="border: 1px solid #2ED2A6; width: 387px" class="d-block">
+                            <br>
+
+                            <h3 class="font_size_30 text-black font-weight-bold family_panton">
+                                Indri Annisa
+                            </h3>
+                            <h3 class="font_size_35 family_panton font-weight-bold text_gray3">
+                                Mahasiswi
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="col__wrapper">
+                            <!-- Swiper -->
+                            <div class="swiper-container saying__swiper py-3 py-md-5">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img class="rounded-3" src="./img/review_img1.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="rounded-3" src="./img/review_img2.png" alt="">
+
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="rounded-3" src="./img/review_img2.png" alt="">
+
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="rounded-3" src="./img/review_img2.png" alt="">
+
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="rounded-3" src="./img/review_img2.png" alt="">
+
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section__realState p-3 p-md-5">
+            <div class="container-xxl">
+                <div class="row  shadow-3 py-3 py-md-5 rounded_10">
+                    <div class="col-12 col-lg-7 mb-4 order-2 order-lg-1">
+                        <div class="col__wrapper d-flex">
+                            <hr style="border: 1px solid #FF623F;width: 39px" class="me-4">
+                            <div class="col__content">
+
+                                <h2 class="text_title my-3 font_size_45 text-uppercase family_panton">
+                                    DISCOVER the valley
+                                </h2>
+                                <hr class="bg_orange" style="width: 70px">
+
+                                <div class="content__body text_black7 family_panton">
+                                    <p class="font_size_20">
+                                        The Shenandoah Valley is located in the western part of Virginia and the eastern
+                                        panhandle of West Virginia, between the Blue Ridge and Allegheny Mountains. The
+                                        region is best known for its natural beauty and Civil War history. The area
+                                        offers a great deal of outdoor activities, to include: national and state parks,
+                                        camp grounds, rivers, wineries, Orchards, farmer markets, distilleries and so
+                                        much more!
+                                    </p>
+                                </div>
+                                <div class="content__footer mt-5">
+                                    <a href="#"
+                                        class="btn h-100 font_size_25 family_panton bg_orange text-white rounded-pill py-md-3 px-md-5 text-capitalize">
+                                        <span class="px-3">CALL US</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5 mb-4 order-1 order-lg-2">
+                        <div class="col__wrapper position-relative mx-3 mx-lg-5">
+                            <div class="img__valleys__wrapper">
+                                <img class="img__valleys" src="./img/nature_valley.png" alt="nature_valley">
+                            </div>
+                            <img class="d-none d-lg-inline-block" src="./img/realState_vector.png"
+                                alt="realState_vector">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
-
 
     <footer class="mt-5 bg_footer py-2 py-md-4">
         <br><br><br>
@@ -380,11 +547,23 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
     <!-- Jquery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- jqueryScript -->
     <script src="js/jqueryScript.js"></script>
     <!-- customScript -->
     <script src="js/customScript.js"></script>
-
+    <script>
+        new Swiper(".saying__swiper", {
+            slidesPerView: "auto",
+            centeredSlides: true,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 
 </body>
 
