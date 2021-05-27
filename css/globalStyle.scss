@@ -205,8 +205,14 @@ body {
 .rounded_10 {
   border-radius: 10px;
 }
+.rounded_20 {
+  border-radius: 20px;
+}
 .rounded_45 {
   border-radius: 45px;
+  @media(max-width: 767px){
+    border-radius: 0px;
+    }
 }
 .w_h_133 {
   width: 133px;

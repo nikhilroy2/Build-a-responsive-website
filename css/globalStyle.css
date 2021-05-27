@@ -310,8 +310,18 @@ body {
   border-radius: 10px;
 }
 
+.rounded_20 {
+  border-radius: 20px;
+}
+
 .rounded_45 {
   border-radius: 45px;
+}
+
+@media (max-width: 767px) {
+  .rounded_45 {
+    border-radius: 0px;
+  }
 }
 
 .w_h_133 {
