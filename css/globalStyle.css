@@ -173,8 +173,28 @@ body {
   }
 }
 
+.font_size_40 {
+  font-size: 40px;
+}
+
+@media (max-width: 991px) {
+  .font_size_40 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 991px) and (max-width: 767px) {
+  .font_size_40 {
+    font-size: 20px;
+  }
+}
+
 .font_size_13 {
   font-size: 13px;
+}
+
+.font_size_11 {
+  font-size: 11px;
 }
 
 .font_size_20 {
@@ -209,6 +229,10 @@ body {
   color: #ff623f;
 }
 
+.text_orange2 {
+  color: #FFB6B6;
+}
+
 .text_success {
   color: #24a6a2;
 }
@@ -218,19 +242,19 @@ body {
 }
 
 .text_title_footer {
-  color: #9EFFF0;
+  color: #9efff0;
 }
 
 .text_facebook {
-  color: #546CE9 !important;
+  color: #546ce9 !important;
 }
 
 .text_twitter {
-  color: #31A8FF !important;
+  color: #31a8ff !important;
 }
 
 .text_dribbble {
-  color: #EB5091 !important;
+  color: #eb5091 !important;
 }
 
 .bg_success {
@@ -238,7 +262,7 @@ body {
 }
 
 .bg_checkmark {
-  background: #1B8382;
+  background: #1b8382;
 }
 
 .content_shadow {

@@ -548,4 +548,8 @@ footer .design__poly img {
   top: -74px;
   right: -65px;
 }
-/*# sourceMappingURL=CustomStyle.css.map */
+
+.sample__number__section .sample__number__section--colbg {
+  background: url("../img/sample_number.png") no-repeat center/cover;
+}
+/*# sourceMappingURL=customStyle.css.map */
