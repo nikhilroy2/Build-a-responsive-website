@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rental Search Page</title>
+    <title>Rental Search</title>
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
@@ -17,18 +17,19 @@
     <!-- customStyle -->
     <link rel="stylesheet" href="./css/customStyle.css">
 </head>
-
 <body>
     <header>
         <div class="position-absolute w-100 d-flex justify-content-between">
             <div class="design_triangle">
-                <img class="rounded-3" src="./img/logo.png" alt="logo">
+                <a href="./index.html"><img class="rounded-3" src="./img/logo.png" alt="logo"></a>
             </div>
             <nav class="nav__wrapper">
 
 
                 <div
                     class="navbar shadow-0 navbar-expand-lg nav__ul w-100 my-4 z_1000 position-relative family_panton d-flex align-items-start justify-content-end justify-content-lg-stretch">
+
+
                     <button
                         class="navbar-toggler position-relative  bg_success text-white py-2 px-4 shadow-sm first-button"
                         type="button" data-mdb-toggle="collapse" data-mdb-target="#navToggleBtn">
@@ -38,27 +39,23 @@
                     <ul id="navToggleBtn" class="navbar-nav py-3 py-lg-0 flex-lg-wrap collapse navbar-collapse   ">
 
                         <li class="nav-item">
-                            <a class="nav-link text-light font_size_18 active_nav " href="#">SERVICES</a>
+                            <a class="nav-link text-light font_size_18 " href="./services.html">SERVICES</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light font_size_18" href="#">FAGQ</a>
+                            <a class="nav-link text-light font_size_18 " href="./faqs.html">FAQS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light font_size_18" href="#">ABOUT</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-light font_size_18" href="#">REFERRALS</a>
+                            <a class="nav-link text-light font_size_18" href="./about.html">ABOUT</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-light font_size_18" href="#">RENTAL</a>
+                            <a class="nav-link text-light font_size_18 " href="./referrals.html">REFERRALS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light font_size_18" href="#">SEARCH</a>
+                            <a class="nav-link text-light font_size_18 active_nav" href="./search.html">RENTAL SEARCH</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light font_size_18" href="#">CONTACT</a>
+                            <a class="nav-link text-light font_size_18 " href="./contact.html">CONTACT</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light font_size_18 d-flex align-items-center" href="#">
@@ -70,14 +67,14 @@
 
                                 Call Us: (540) 692-3650</a>
                         </li>
-                        <div class="nav-item d-flex">
+                        <!-- <div class="nav-item d-flex">
                             <a class="d-inline-flex justify-content-center align-items-center social_size rounded-circle bg-white mx-2 text_facebook"
                                 href="#"> <i class="fab fa-facebook-f    "></i></a>
                             <a class="d-inline-flex justify-content-center align-items-center social_size rounded-circle bg-white me-2 text_twitter"
                                 href="#"><i class="fab fa-twitter    "></i></a>
                             <a class="d-inline-flex justify-content-center align-items-center social_size rounded-circle bg-white text_dribbble"
                                 href="#"> <i class="fab fa-dribbble    "></i></a>
-                        </div>
+                        </div> -->
                     </ul>
                 </div>
 
@@ -86,32 +83,31 @@
             </nav>
         </div>
     </header>
-
     <main>
-        <section class="header__bg__angles header__bg__angles--top ">
+        <section class="header__bg__angles header__bg__angles--vector pointer_none">
 
             <div class="container-xxl">
                 <div class="row mb-3 mb-md-5">
                     <div class="col-12 position-relative">
                         <div class="col__wrapper text-center">
-                            <h1 class="font_size_65 text-white family_panton text-uppercase">
+                            <h1 class="font_size_65 text-white family_panton text-uppercase pointer_visible">
                                 local HOMES FOR RENT
                             </h1>
-                            <h3 class="font_size_35 family_panton text-white my-3 text-uppercase">
+                            <h3 class="font_size_35 family_panton text-white my-3 text-uppercase pointer_visible">
                                 Find the Perfect Home
                             </h3>
 
                         </div>
                     </div>
                 </div>
-                <div class="row position-relative">
+                <div class="row position-relative pointer_visible">
                     <div class="col__drawer ">
                         <img src="./img/rounder_draw.png" alt="rounder_draw" style="top: 100px;" class="rounder__draw">
                         <img src="./img/rounder_orange.png" alt="rounder_orange" style="top: 350px;"
                             class="rounder__orange">
                     </div>
                 </div>
-                <div class="row position-relative">
+                <div class="row position-relative pointer_visible">
                     <div class=" p-3 p-md-4 bg-white rounded_45 shadow-3">
                         <div class="row">
                             <div class="col-sm-6 h-auto">

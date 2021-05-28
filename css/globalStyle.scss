@@ -253,5 +253,11 @@ body {
 .scale_half {
   transform: scale(0.5);
 }
+.pointer_visible{
+  pointer-events: visible;
+}
+.pointer_none{
+  pointer-events: none;
+}
 
 // ..............global classes.....................End

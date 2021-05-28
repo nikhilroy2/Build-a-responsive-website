@@ -376,4 +376,12 @@ body {
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
 }
+
+.pointer_visible {
+  pointer-events: visible;
+}
+
+.pointer_none {
+  pointer-events: none;
+}
 /*# sourceMappingURL=globalStyle.css.map */

@@ -5,50 +5,810 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Mint Management</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- globalStyle -->
+    <link rel="stylesheet" href="./css/globalStyle.css">
+    <!-- customStyle -->
+    <link rel="stylesheet" href="./css/customStyle.css">
 </head>
 
 <body>
-    <div class="container-xxl my-5">
-        <div class="row">
-            <div class="col-6 col-lg-3 mb-3 ">
-                <div class="p-5 shadow-1-strong rounded-3 text-center">
-                    <a href="./mint.html">Mint Page</a>
+    <header>
+        <div class="position-absolute w-100 d-flex justify-content-between">
+            <div class="design_triangle">
+                <a href="./index.html"><img class="rounded-3" src="./img/logo.png" alt="logo"></a>
+            </div>
+            <nav class="nav__wrapper">
+
+
+                <div
+                    class="navbar shadow-0 navbar-expand-lg nav__ul w-100 my-4 z_1000 position-relative family_panton d-flex align-items-start justify-content-end justify-content-lg-stretch">
+
+
+                    <button
+                        class="navbar-toggler position-relative  bg_success text-white py-2 px-4 shadow-sm first-button"
+                        type="button" data-mdb-toggle="collapse" data-mdb-target="#navToggleBtn">
+                        <i class="fas fa-bars    "></i>
+                    </button>
+
+                    <ul id="navToggleBtn" class="navbar-nav py-3 py-lg-0 flex-lg-wrap collapse navbar-collapse   ">
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light font_size_18 " href="./services.html">SERVICES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light font_size_18" href="./faqs.html">FAQS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light font_size_18" href="./about.html">ABOUT</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light font_size_18" href="./referrals.html">REFERRALS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light font_size_18" href="./search.html">RENTAL SEARCH</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light font_size_18" href="./contact.html">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light font_size_18 d-flex align-items-center" href="#">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="me-2">
+                                    <path
+                                        d="M15.707 10.2932C15.6142 10.2003 15.504 10.1265 15.3827 10.0762C15.2613 10.0259 15.1313 10 15 10C14.8686 10 14.7386 10.0259 14.6173 10.0762C14.496 10.1265 14.3858 10.2003 14.293 10.2932L12.699 11.8872C11.96 11.6672 10.581 11.1672 9.70697 10.2932C8.83297 9.4192 8.33297 8.0402 8.11297 7.3012L9.70697 5.7072C9.79991 5.61441 9.87365 5.50421 9.92396 5.38289C9.97427 5.26158 10.0002 5.13153 10.0002 5.0002C10.0002 4.86887 9.97427 4.73882 9.92396 4.61751C9.87365 4.49619 9.79991 4.38599 9.70697 4.2932L5.70697 0.293201C5.61418 0.200255 5.50398 0.126518 5.38266 0.0762068C5.26135 0.0258961 5.1313 0 4.99997 0C4.86863 0 4.73859 0.0258961 4.61727 0.0762068C4.49596 0.126518 4.38576 0.200255 4.29297 0.293201L1.58097 3.0052C1.20097 3.3852 0.986968 3.9072 0.994968 4.4402C1.01797 5.8642 1.39497 10.8102 5.29297 14.7082C9.19097 18.6062 14.137 18.9822 15.562 19.0062H15.59C16.118 19.0062 16.617 18.7982 16.995 18.4202L19.707 15.7082C19.7999 15.6154 19.8737 15.5052 19.924 15.3839C19.9743 15.2626 20.0002 15.1325 20.0002 15.0012C20.0002 14.8699 19.9743 14.7398 19.924 14.6185C19.8737 14.4972 19.7999 14.387 19.707 14.2942L15.707 10.2932ZM15.58 17.0052C14.332 16.9842 10.062 16.6492 6.70697 13.2932C3.34097 9.9272 3.01497 5.6422 2.99497 4.4192L4.99997 2.4142L7.58597 5.0002L6.29297 6.2932C6.17543 6.41065 6.08901 6.55554 6.04152 6.71477C5.99403 6.874 5.98697 7.04256 6.02097 7.2052C6.04497 7.3202 6.63197 10.0472 8.29197 11.7072C9.95197 13.3672 12.679 13.9542 12.794 13.9782C12.9565 14.0132 13.1252 14.0067 13.2846 13.9593C13.444 13.9119 13.5889 13.8252 13.706 13.7072L15 12.4142L17.586 15.0002L15.58 17.0052Z"
+                                        fill="#FFC9BD" />
+                                </svg>
+
+                                Call Us: (540) 692-3650</a>
+                        </li>
+                        <!-- <div class="nav-item d-flex">
+                            <a class="d-inline-flex justify-content-center align-items-center social_size rounded-circle bg-white mx-2 text_facebook"
+                                href="#"> <i class="fab fa-facebook-f    "></i></a>
+                            <a class="d-inline-flex justify-content-center align-items-center social_size rounded-circle bg-white me-2 text_twitter"
+                                href="#"><i class="fab fa-twitter    "></i></a>
+                            <a class="d-inline-flex justify-content-center align-items-center social_size rounded-circle bg-white text_dribbble"
+                                href="#"> <i class="fab fa-dribbble    "></i></a>
+                        </div> -->
+                    </ul>
+                </div>
+
+
+
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="header__bg__angles header__bg__angles--vector pointer_none">
+
+            <div class="container-xxl">
+                <div class="row">
+                    <div class="col-12 position-relative">
+                        <div class="col__wrapper">
+                            <h1 class="font_size_65 text-white pointer_visible">
+                                THE VALLEY’S PROPERTY <br>
+                                MANAGEMENT
+                            </h1>
+                            <p class="text-white font_size_35 content_shadow my-4 pointer_visible">
+                                Serving Warren County, Clarke County, Page County,
+                                <br>
+                                Frederick County and other surrounding areas
+                            </p>
+
+                            <div class="btn__wrapper pointer_visible">
+                                <a href="#"
+                                    class="btn font_size_20 bg_orange text-white py-md-3 px-md-5 rounded-pill text-capitalize">
+                                    Manage My Property
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-6 col-lg-3 mb-3 ">
-                <div class="p-5 shadow-1-strong rounded-3 text-center">
-                    <a href="./mint2.html">Mint2 Page</a>
+        </section>
+        <section class="section__why__mint">
+
+            <div class="container-xxl">
+                <div class="row mb-3 mb-md-5">
+                    <div class="col-12">
+                        <h2 class="text-center  text_title font_size_60 text-uppercase">
+                            <span class="mint__title family_panton" data-mint-title="Why Mint">
+                                Why Mint
+                            </span>
+                        </h2>
+                        <h3 class="text-center text-uppercase font_size_25 text_gray font-weight-bold family_panton">
+                            we are driven by excellence
+                        </h3>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+                    <div class="col mb-3 h-auto">
+                        <div class="col__wrapper h-100">
+                            <div class="card text-left shadow-4 rounded_45">
+                                <img class="card-img-top w_h_133 rounded-circle mx-auto my-2"
+                                    src="./img/assets/law_experts.png" alt="">
+                                <div class="card-body">
+                                    <h3
+                                        class="card-title mb-md-4 text-uppercase font_size_25 text-black text-center family_panton">
+                                        tentant law eXPERTS</h3>
+                                    <p
+                                        class="card-text font_size_16 text-uppercase font-weight-bold family_panton line_144 text-center text_gray2">
+                                        Don't let just anyone manage your rental property. We're experts IN VA, WV AND
+                                        md landlord-tenant laws, and work to keep your property compliant. Say goodbye
+                                        to the risks and let our team take control.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3 h-auto">
+                        <div class="col__wrapper h-100">
+                            <div class="card text-left shadow-4 rounded_45">
+                                <img class="card-img-top w_h_133 rounded-circle mx-auto my-2"
+                                    src="./img/assets/law_experts.png" alt="">
+                                <div class="card-body">
+                                    <h3
+                                        class="card-title mb-md-4 text-uppercase font_size_25 text-black text-center family_panton">
+                                        tentant law eXPERTS</h3>
+                                    <p
+                                        class="card-text font_size_16 text-uppercase font-weight-bold family_panton line_144 text-center text_gray2">
+                                        Don't let just anyone manage your rental property. We're experts IN VA, WV AND
+                                        md landlord-tenant laws, and work to keep your property compliant. Say goodbye
+                                        to the risks and let our team take control.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3 h-auto">
+                        <div class="col__wrapper h-100">
+                            <div class="card text-left shadow-4 rounded_45">
+                                <img class="card-img-top w_h_133 rounded-circle mx-auto my-2"
+                                    src="./img/assets/law_experts.png" alt="">
+                                <div class="card-body">
+                                    <h3
+                                        class="card-title mb-md-4 text-uppercase font_size_25 text-black text-center family_panton">
+                                        tentant law eXPERTS</h3>
+                                    <p
+                                        class="card-text font_size_16 text-uppercase font-weight-bold family_panton line_144 text-center text_gray2">
+                                        Don't let just anyone manage your rental property. We're experts IN VA, WV AND
+                                        md landlord-tenant laws, and work to keep your property compliant. Say goodbye
+                                        to the risks and let our team take control.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3 h-auto">
+                        <div class="col__wrapper h-100">
+                            <div class="card text-left shadow-4 rounded_45">
+                                <img class="card-img-top w_h_133 rounded-circle mx-auto my-2"
+                                    src="./img/assets/law_experts.png" alt="">
+                                <div class="card-body">
+                                    <h3
+                                        class="card-title mb-md-4 text-uppercase font_size_25 text-black text-center family_panton">
+                                        tentant law eXPERTS</h3>
+                                    <p
+                                        class="card-text font_size_16 text-uppercase font-weight-bold family_panton line_144 text-center text_gray2">
+                                        Don't let just anyone manage your rental property. We're experts IN VA, WV AND
+                                        md landlord-tenant laws, and work to keep your property compliant. Say goodbye
+                                        to the risks and let our team take control.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-6 col-lg-3 mb-3 ">
-                <div class="p-5 shadow-1-strong rounded-3 text-center">
-                    <a href="./mint3.html">Mint3 Page</a>
+        </section>
+        <section class="section_bg_slider">
+            <div class="container-xxl py-3 py-md-5">
+                <div class="row mb-3 mb-md-5">
+                    <div class="col-12">
+                        <div class="col-12">
+                            <div class="col__wrapper">
+                                <h2 class="text-center  text_title font_size_50 text-uppercase">
+                                    <span class="family_panton">
+                                        We are driven by excellence
+                                    </span>
+                                </h2>
+                                <h3
+                                    class="text-center text-uppercase font_size_25 text_gray font-weight-bold family_panton">
+                                    Check out all our services
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Swiper -->
+                        <div class="swiper-container swiper__driven pb-3 pb-md-5">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide h-100  rounded_45">
+                                    <div class="col__wrapper h-100 rounded_45">
+                                        <div class="card text-left h-100 rounded_45">
+                                            <div class="card-header border-0 px-2 px-4 pt-4 pb-0">
+                                                <img class="card-img-top rounded_45" src="./img/marketing.png" alt="">
+                                            </div>
+                                            <div class="card-body pb-0">
+                                                <h3
+                                                    class="card-title my-md-4 text-uppercase font_size_25 text-black text-center family_panton">
+                                                    Property Marketing</h3>
+                                                <hr style="border: 2px solid #26A2A0; width: 32px; margin: auto;">
+                                                <p
+                                                    class=" text_black8 family_panton text-center mt-2 mt-md-4 font_size_16">
+                                                    Our team markets your property aggressively with a combination of
+                                                    promotional
+                                                    tools to FIND the right tenant as quickly as possible.
+                                                </p>
+                                            </div>
+                                            <div class="card-footer border-0 text-center mb-3">
+                                                <a href="#"
+                                                    class="text_unset font_size_18 font-weight-bold px-md-5 border_orange btn btn-muted shadow-0 rounded-pill">
+                                                    Read more...
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide h-100  rounded_45">
+                                    <div class="col__wrapper h-100 rounded_45">
+                                        <div class="card text-left h-100 rounded_45">
+                                            <div class="card-header border-0 px-2 px-4 pt-4 pb-0">
+                                                <img class="card-img-top rounded_45" src="./img/tenant.png" alt="">
+                                            </div>
+                                            <div class="card-body pb-0">
+                                                <h3
+                                                    class="card-title my-md-4 text-uppercase font_size_25 text-black text-center family_panton">
+                                                    Tenant Screening</h3>
+                                                <hr style="border: 2px solid #26A2A0; width: 32px; margin: auto;">
+                                                <p
+                                                    class=" text_black8 family_panton text-center mt-2 mt-md-4 font_size_16">
+                                                    Every application we receive is subjected to our strict tenant
+                                                    screening process. We only place highly qualified tenants to keep
+                                                    you protected.
+                                                </p>
+                                            </div>
+                                            <div class="card-footer border-0 text-center mb-3">
+                                                <a href="#"
+                                                    class="text_unset font_size_18 font-weight-bold px-md-5 border_orange btn btn-muted shadow-0 rounded-pill">
+                                                    Read more...
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide h-100  rounded_45">
+                                    <div class="col__wrapper h-100 rounded_45">
+                                        <div class="card text-left h-100 rounded_45">
+                                            <div class="card-header border-0 px-2 px-4 pt-4 pb-0">
+                                                <img class="card-img-top rounded_45" src="./img/rent.png" alt="">
+                                            </div>
+                                            <div class="card-body pb-0">
+                                                <h3
+                                                    class="card-title my-md-4 text-uppercase font_size_25 text-black text-center family_panton">
+                                                    Rent Collection</h3>
+                                                <hr style="border: 2px solid #26A2A0; width: 32px; margin: auto;">
+                                                <p
+                                                    class=" text_black8 family_panton text-center mt-2 mt-md-4 font_size_16">
+                                                    We handle all billing and rent collection on your behalf,
+                                                    guaranteeing you get your rent in on time and protecting your
+                                                    cashflow.
+                                                </p>
+                                            </div>
+                                            <div class="card-footer border-0 text-center mb-3">
+                                                <a href="#"
+                                                    class="text_unset font_size_18 font-weight-bold px-md-5 border_orange btn btn-muted shadow-0 rounded-pill">
+                                                    Read more...
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide h-100 rounded_45">
+                                    <div class="col__wrapper h-100 rounded_45">
+                                        <div class="card text-left h-100 rounded_45">
+                                            <div class="card-header border-0 px-2 px-4 pt-4 pb-0">
+                                                <img class="card-img-top rounded_45" src="./img/marketing.png" alt="">
+                                            </div>
+                                            <div class="card-body pb-0">
+                                                <h3
+                                                    class="card-title my-md-4 text-uppercase font_size_25 text-black text-center family_panton">
+                                                    Property Marketing</h3>
+                                                <hr style="border: 2px solid #26A2A0; width: 32px; margin: auto;">
+                                                <p
+                                                    class=" text_black8 family_panton text-center mt-2 mt-md-4 font_size_16">
+                                                    Our team markets your property aggressively with a combination of
+                                                    promotional
+                                                    tools to FIND the right tenant as quickly as possible.
+                                                </p>
+                                            </div>
+                                            <div class="card-footer border-0 text-center mb-3">
+                                                <a href="#"
+                                                    class="text_unset font_size_18 font-weight-bold px-md-5 border_orange btn btn-muted shadow-0 rounded-pill">
+                                                    Read more...
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide h-100  rounded_45">
+                                    <div class="col__wrapper h-100 rounded_45">
+                                        <div class="card text-left h-100 rounded_45">
+                                            <div class="card-header border-0 px-2 px-4 pt-4 pb-0">
+                                                <img class="card-img-top rounded_45" src="./img/marketing.png" alt="">
+                                            </div>
+                                            <div class="card-body pb-0">
+                                                <h3
+                                                    class="card-title my-md-4 text-uppercase font_size_25 text-black text-center family_panton">
+                                                    Property Marketing</h3>
+                                                <hr style="border: 2px solid #26A2A0; width: 32px; margin: auto;">
+                                                <p
+                                                    class=" text_black8 family_panton text-center mt-2 mt-md-4 font_size_16">
+                                                    Our team markets your property aggressively with a combination of
+                                                    promotional
+                                                    tools to FIND the right tenant as quickly as possible.
+                                                </p>
+                                            </div>
+                                            <div class="card-footer border-0 text-center mb-3">
+                                                <a href="#"
+                                                    class="text_unset font_size_18 font-weight-bold px-md-5 border_orange btn btn-muted shadow-0 rounded-pill">
+                                                    Read more...
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide h-100  rounded_45">
+                                    <div class="col__wrapper h-100 rounded_45">
+                                        <div class="card text-left h-100 rounded_45">
+                                            <div class="card-header border-0 px-2 px-4 pt-4 pb-0">
+                                                <img class="card-img-top rounded_45" src="./img/marketing.png" alt="">
+                                            </div>
+                                            <div class="card-body pb-0">
+                                                <h3
+                                                    class="card-title my-md-4 text-uppercase font_size_25 text-black text-center family_panton">
+                                                    Property Marketing</h3>
+                                                <hr style="border: 2px solid #26A2A0; width: 32px; margin: auto;">
+                                                <p
+                                                    class=" text_black8 family_panton text-center mt-2 mt-md-4 font_size_16">
+                                                    Our team markets your property aggressively with a combination of
+                                                    promotional
+                                                    tools to FIND the right tenant as quickly as possible.
+                                                </p>
+                                            </div>
+                                            <div class="card-footer border-0 text-center mb-3">
+                                                <a href="#"
+                                                    class="text_unset font_size_18 font-weight-bold px-md-5 border_orange btn btn-muted shadow-0 rounded-pill">
+                                                    Read more...
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide h-100  rounded_45">
+                                    <div class="col__wrapper h-100 rounded_45">
+                                        <div class="card text-left h-100 rounded_45">
+                                            <div class="card-header border-0 px-2 px-4 pt-4 pb-0">
+                                                <img class="card-img-top rounded_45" src="./img/marketing.png" alt="">
+                                            </div>
+                                            <div class="card-body pb-0">
+                                                <h3
+                                                    class="card-title my-md-4 text-uppercase font_size_25 text-black text-center family_panton">
+                                                    Property Marketing</h3>
+                                                <hr style="border: 2px solid #26A2A0; width: 32px; margin: auto;">
+                                                <p
+                                                    class=" text_black8 family_panton text-center mt-2 mt-md-4 font_size_16">
+                                                    Our team markets your property aggressively with a combination of
+                                                    promotional
+                                                    tools to FIND the right tenant as quickly as possible.
+                                                </p>
+                                            </div>
+                                            <div class="card-footer border-0 text-center mb-3">
+                                                <a href="#"
+                                                    class="text_unset font_size_18 font-weight-bold px-md-5 border_orange btn btn-muted shadow-0 rounded-pill">
+                                                    Read more...
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide h-100  rounded_45">
+                                    <div class="col__wrapper h-100 rounded_45">
+                                        <div class="card text-left h-100 rounded_45">
+                                            <div class="card-header border-0 px-2 px-4 pt-4 pb-0">
+                                                <img class="card-img-top rounded_45" src="./img/marketing.png" alt="">
+                                            </div>
+                                            <div class="card-body pb-0">
+                                                <h3
+                                                    class="card-title my-md-4 text-uppercase font_size_25 text-black text-center family_panton">
+                                                    Property Marketing</h3>
+                                                <hr style="border: 2px solid #26A2A0; width: 32px; margin: auto;">
+                                                <p
+                                                    class=" text_black8 family_panton text-center mt-2 mt-md-4 font_size_16">
+                                                    Our team markets your property aggressively with a combination of
+                                                    promotional
+                                                    tools to FIND the right tenant as quickly as possible.
+                                                </p>
+                                            </div>
+                                            <div class="card-footer border-0 text-center mb-3">
+                                                <a href="#"
+                                                    class="text_unset font_size_18 font-weight-bold px-md-5 border_orange btn btn-muted shadow-0 rounded-pill">
+                                                    Read more...
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide h-100  rounded_45">
+                                    <div class="col__wrapper h-100 rounded_45">
+                                        <div class="card text-left h-100 rounded_45">
+                                            <div class="card-header border-0 px-2 px-4 pt-4 pb-0">
+                                                <img class="card-img-top rounded_45" src="./img/marketing.png" alt="">
+                                            </div>
+                                            <div class="card-body pb-0">
+                                                <h3
+                                                    class="card-title my-md-4 text-uppercase font_size_25 text-black text-center family_panton">
+                                                    Property Marketing</h3>
+                                                <hr style="border: 2px solid #26A2A0; width: 32px; margin: auto;">
+                                                <p
+                                                    class=" text_black8 family_panton text-center mt-2 mt-md-4 font_size_16">
+                                                    Our team markets your property aggressively with a combination of
+                                                    promotional
+                                                    tools to FIND the right tenant as quickly as possible.
+                                                </p>
+                                            </div>
+                                            <div class="card-footer border-0 text-center mb-3">
+                                                <a href="#"
+                                                    class="text_unset font_size_18 font-weight-bold px-md-5 border_orange btn btn-muted shadow-0 rounded-pill">
+                                                    Read more...
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-6 col-lg-3 mb-3 ">
-                <div class="p-5 shadow-1-strong rounded-3 text-center">
-                    <a href="./faqs.html">FAQS Page</a>
+        </section>
+        <section class="section__saying__slider mb-5 pb-5">
+            <div class="container-xxl">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="col__wrapper">
+                            <h2 class=" text_title font_size_60 text-uppercase">
+                                <span class="family_panton">
+                                    WHAT OTHERS ARE SAYING
+                                </span>
+                            </h2>
+                            <h3 class="text-uppercase font_size_25 text_gray font-weight-bold family_panton">
+                                Reviews FROM SATISIFIED CLIENTS
+                            </h3>
+                            <hr style="width: 222px; border: 1px solid #269A9A;" class="d-block">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="col__wrapper">
+                            <b class="font_size_140 text_orange font-weight-bold d-inline-block mt-n5">
+                                ,,
+                            </b>
+                            <h3 class="font_size_30 text_blackGray font-weight-bold family_panton">
+                                NEED A REVIEW
+                            </h3>
+                            <br><br><br><br>
+                            <br><br><br>
+                            <hr style="border: 1px solid #2ED2A6; width: 387px" class="d-block">
+                            <br>
+
+                            <h3 class="font_size_30 text-black font-weight-bold family_panton">
+                                BETH WALLER
+                            </h3>
+                            <h3 class="font_size_35 family_panton font-weight-bold text_gray3">
+                                FRONT ROYAL, VA
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="col__wrapper">
+                            <!-- Swiper -->
+                            <div class="swiper-container saying__swiper py-3 py-md-5">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img class="rounded-3" src="./img/review_img1.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="rounded-3" src="./img/review_img2.png" alt="">
+
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="rounded-3" src="./img/review_img2.png" alt="">
+
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="rounded-3" src="./img/review_img2.png" alt="">
+
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="rounded-3" src="./img/review_img2.png" alt="">
+
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-            <div class="col-6 col-lg-3 mb-3 ">
-                <div class="p-5 shadow-1-strong rounded-3 text-center">
-                    <a href="./contact.html">Contact Page</a>
+        </section>
+        <section class="mt-5 pt-5">
+            <div class="container-xxl shadow p-3 p-5 angle__vector rounded_45">
+                <div class="row row-cols-1 row-cols-md-2 ">
+                    <div class="col ">
+                        <div class="col__wrapper">
+                            <h2 class=" text_title font_size_45 text-uppercase">
+                                <span class="family_panton">
+                                    FREE RENTAL ANALYSIS!
+                                </span>
+                            </h2>
+                            <ul class="list-group">
+                                <li class="list-group-item border-0">
+                                    <i class="fas fa-dot-circle bg_success text_success me-2 rounded-circle    "></i>
+                                    Discover the rental value of your property.
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <i class="fas fa-dot-circle bg_success text_success me-2 rounded-circle    "></i>
+                                    Find out how to earn your maximum rent.
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <i class="fas fa-dot-circle bg_success text_success me-2 rounded-circle    "></i>
+
+                                    Learn whether your home fits our portfolio.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <form action="" method="post" class="d-flex">
+                            <div class="form-group flex-grow-1 me-3">
+                                <input type="email" placeholder="Type your email"
+                                    class="px-4  py-md-3 form-control border_success shadow-0 rounded-pill">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit"
+                                    class="btn font_size_20 h-100 bg_orange text-white rounded-pill py-md-3 px-md-5 text-capitalize">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <div class="col-6 col-lg-3 mb-3 ">
-                <div class="p-5 shadow-1-strong rounded-3 text-center">
-                    <a href="./referrals.html">Referrals Page</a>
+        </section>
+        <br><br><br><br><br>
+        <section class="section__realState">
+            <div class="container-xxl">
+                <div class="row ">
+                    <div class="col-12 col-lg-7 mb-4 order-2 order-lg-1">
+                        <div class="col__wrapper d-flex">
+                            <hr style="border: 1px solid #FF623F;width: 39px" class="me-4">
+                            <div class="col__content">
+                                <h5 class="text_orange font_size_20">
+                                    We know OUR COMMUNITY. We know real estate.
+                                </h5>
+                                <h2 class="text_title my-3 font_size_45 text-uppercase family_panton">
+                                    THE VALLEY’S LOCAL PROPERTY MANAGEMENT EXPERTS
+                                </h2>
+                                <div class="content__body text_black7 family_panton">
+                                    <p class="font_size_20">
+                                        If you own a local rental property, you understand how important it is to FIND
+                                        the right management partner. You're not simply looking for the cheapest option
+                                        or the bare minimum; instead, you're making a decision that will impact your
+                                        future profItability and ULTIMATELY, keep your property in great shape for years
+                                        to come. In CONCLUSION, you need a local expert AND ALLY on your side.
+                                        <br>
+                                        <br>
+                                        At MINT Management GROUP, we work diligently to provide the best property
+                                        management in the valley, reaching va, wv and MD. Our talented staff of real
+                                        estate proFESSIONALS pay close attention to the local market and WILL DO THEIR
+                                        utmost to keep your home performing optimally. Whether you own a single
+                                        residential home or a large portfolio, we're STRATEGICALLY positioned to help
+                                        you THRIVE.
+                                    </p>
+                                </div>
+                                <div class="content__footer mt-5">
+                                    <a href="#"
+                                        class="btn h-100 font_size_25 family_panton bg_orange text-white rounded-pill py-md-3 px-md-5 text-capitalize">
+                                        <span class="px-3">CALL US</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5 mb-4 order-1 order-lg-2">
+                        <div class="col__wrapper position-relative mx-3 mx-lg-5">
+                            <div class="img__valleys__wrapper">
+                                <img class="img__valleys" src="./img/assets/valleys.png" alt="valleys">
+                            </div>
+                            <img class="d-none d-md-inline-block" src="./img/realState_vector.png"
+                                alt="realState_vector">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-6 col-lg-3 mb-3 ">
-                <div class="p-5 shadow-1-strong rounded-3 text-center">
-                    <a href="./rental_search.html">Rental Search Page</a>
+        </section>
+    </main>
+    <footer class="mt-5 bg_footer py-2 py-md-4">
+        <br><br><br>
+        <img src="./img/Oval_Copy.png" alt="Oval_Copy" class="design__oval">
+        <div class="design__poly">
+            <img src="./img/design_poly.png" alt="design__poly">
+        </div>
+        <div class="container-xxl">
+            <div class="row">
+                <div class="col-12 col-md-4 col-lg-6 mb-4 ">
+                    <div class="col__wrapper">
+                        <img src="./img/logo.png" class="rounded-3" height="85px" alt="logo">
+                        <br>
+                        <br>
+                        <br>
+                        <a href="#"
+                            class="btn h-100 font_size_13 family_panton bg_orange text-white rounded-pill py-md-3 px-md-5 text-capitalize">
+                            Ask Question
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-4">
+                    <div class="col__wrapper">
+                        <h3 class="font_size_18 family_panton text_title_footer mb-4 family_panton">Community</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item border-0 bg_transparent ps-0 ms-0 ">
+                                <a href="#" class="text_gray4 font_size_16">For Talents</a>
+                            </li>
+                            <li class="list-group-item border-0 bg_transparent ps-0 ms-0">
+                                <a href="#" class="text_gray4 font_size_16">For Companies</a>
+                            </li>
+                            <li class="list-group-item border-0 bg_transparent ps-0 ms-0">
+                                <a href="#" class="text_gray4 font_size_16">Facebook Group</a>
+                            </li>
+                            <li class="list-group-item border-0 bg_transparent ps-0 ms-0">
+                                <a href="#" class="text_gray4 font_size_16">FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-4">
+                    <div class="col__wrapper">
+                        <h3 class="font_size_18 family_panton text_title_footer mb-4 family_panton">About us</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item border-0 bg_transparent ps-0 ms-0 ">
+                                <a href="#" class="text_gray4 font_size_16">Meet the Team</a>
+                            </li>
+                            <li class="list-group-item border-0 bg_transparent ps-0 ms-0">
+                                <a href="#" class="text_gray4 font_size_16">Our Story</a>
+                            </li>
+                            <li class="list-group-item border-0 bg_transparent ps-0 ms-0">
+                                <a href="#" class="text_gray4 font_size_16">Career</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-4">
+                    <div class="col__wrapper">
+                        <dl>
+                            <dt>
+                                <h3 class="font_size_18 family_panton text_title_footer mb-4 family_panton">CONTACTS
+                                </h3>
+                            </dt>
+                            <dd class="text_gray font_size_15">
+                                Feel free to get in touch <br>
+                                with us via phone or send <br>
+                                us a message.
+                            </dd>
+                            <dd class="font_size_16 text_success">
+                                +1-301-340-3946 <br>
+                                info@finity.com
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-2 mt-5">
+
+                <div class="col-12">
+                    <iframe class="w-100 rounded_10"
+                        src="https://www.google.com/maps/d/embed?mid=1bf4qwgGAMWSKS2N2GnGJRONqRTs"
+                        height="308px"></iframe>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <span class="font_size_13 text_gray2">
+                        © 2021, All Rights Reserved
+                    </span>
+                </div>
+                <div class="col-sm-6">
+                    <div class="col__wrapper d-flex justify-content-end">
+                        <a href="#" class="text-white me-3">
+                            <i class="fab fa-twitter    "></i>
+                        </a>
+                        <a href="#" class="text-white me-3">
+                            <i class="fab fa-facebook-f    "></i>
+                        </a>
+                        <a href="#" class="text-white">
+                            <i class="fab fa-google    "></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
+    <!-- Jquery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- jqueryScript -->
+    <script src="js/jqueryScript.js"></script>
+    <!-- customScript -->
+    <script src="js/customScript.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        new Swiper(".swiper__driven", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                },
+            },
+        });
+
+        new Swiper(".saying__swiper", {
+            slidesPerView: "auto",
+            centeredSlides: true,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
 </body>
+
 </html>
