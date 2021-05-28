@@ -9,23 +9,39 @@ header .design_triangle {
   height: 934.52px;
   background: url("../img/logo_trinagle.png") no-repeat;
   pointer-events: none;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 @media (max-width: 1600px) {
   header .design_triangle {
-    width: 600px;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
   }
 }
 
 @media (max-width: 1600px) and (max-width: 1250px) {
   header .design_triangle {
-    background-image: none;
+    width: 3500.06px;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
   }
 }
 
 @media (max-width: 1600px) and (max-width: 1250px) and (max-width: 880px) {
   header .design_triangle {
-    width: 545px;
+    width: 100000000.06px;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+@media (max-width: 1600px) and (max-width: 1250px) and (max-width: 880px) and (max-width: 600px) {
+  header .design_triangle {
+    -webkit-transform: scale(0.35);
+            transform: scale(0.35);
   }
 }
 
@@ -33,20 +49,6 @@ header .design_triangle img {
   height: 155px;
   margin-left: 197px;
   margin-top: 19px;
-}
-
-@media (max-width: 1250px) {
-  header .design_triangle img {
-    margin-left: 19px;
-    height: 100px;
-  }
-}
-
-@media (max-width: 1250px) and (max-width: 880px) {
-  header .design_triangle img {
-    height: 60px;
-    margin-top: 30px;
-  }
 }
 
 header .nav__wrapper {
@@ -69,6 +71,14 @@ header .nav__wrapper {
 @media (max-width: 1600px) and (max-width: 1250px) and (max-width: 880px) {
   header .nav__wrapper {
     width: 100%;
+  }
+}
+
+@media (max-width: 1600px) and (max-width: 991px) {
+  header .nav__wrapper .navbar {
+    position: absolute !important;
+    top: 0;
+    right: 15px;
   }
 }
 
@@ -206,6 +216,12 @@ section.section_bg_slider {
   margin-top: -350px;
 }
 
+@media (max-width: 880px) {
+  section.section_bg_slider {
+    background-size: cover;
+  }
+}
+
 section.section_bg_slider .swiper-container {
   width: 100%;
   height: 100%;
@@ -285,10 +301,9 @@ section.section__saying__slider .swiper-slide {
 section.section__saying__slider .swiper-slide img {
   display: block;
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  max-height: 500px;
+  height: 500px;
 }
 
 section.section__saying__slider .saying__swiper {
@@ -313,6 +328,12 @@ section.section__saying__slider .saying__swiper::after {
   width: 312.25px;
   height: 312.25px;
   position: absolute;
+}
+
+@media (max-width: 767px) {
+  section.section__saying__slider .saying__swiper::after {
+    display: none;
+  }
 }
 
 .swiper-button-next:after,
@@ -552,4 +573,4 @@ footer .design__poly img {
 .sample__number__section .sample__number__section--colbg {
   background: url("../img/sample_number.png") no-repeat center/cover;
 }
-/*# sourceMappingURL=customStyle.css.map */
+/*# sourceMappingURL=CustomStyle.css.map */
