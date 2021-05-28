@@ -146,7 +146,7 @@ header .nav__wrapper .nav__ul {
 
 @media (max-width: 767px) {
   .header__bg__angles {
-    min-height: 500px;
+    min-height: 1280px;
   }
 }
 
