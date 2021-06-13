@@ -586,9 +586,9 @@
                         </div>
                     </div>
                     <div class="col">
-                        <form action="" method="post" class="d-flex">
+                        <form action="" onsubmit="return EmailForm(this)" method="post" class="d-flex flex-wrap">
                             <div class="form-group flex-grow-1 me-3">
-                                <input type="email" placeholder="Type your email"
+                                <input type="email" placeholder="Type your email" name="email"
                                     class="px-4  py-md-3 form-control border_success shadow-0 rounded-pill">
                             </div>
                             <div class="form-group">
@@ -745,6 +745,47 @@
                 prevEl: ".swiper-button-prev",
             },
         });
+    </script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAyMNV03YfI9x86e0G1PTkycAfWBQavXAM",
+            authDomain: "mint-management.firebaseapp.com",
+            projectId: "mint-management",
+            storageBucket: "mint-management.appspot.com",
+            messagingSenderId: "35807825117",
+            appId: "1:35807825117:web:e10487cb7ee37689e4df34",
+            measurementId: "G-6X90CGLFJF"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        let firestore = firebase.firestore()
+        const db = firestore.collection('subcribe_email_db')
+        //console.log(db)
+        function EmailForm(val) {
+            event.preventDefault()
+            // console.log(event.target['name'])
+            let emailValue = event.target['email'].value;
+            db.doc().set({
+                email: emailValue,
+                created_at: new Date()
+            }).then(() => {
+                let h3 = document.createElement('h3')
+                h3.classList.add('text-success')
+                h3.classList.add('my-3')
+                h3.innerHTML = 'Thanks for your email'
+                val.appendChild(h3)
+                console.log("data saved")
+            }).catch(error => {
+                console.log(error)
+            })
+        }
     </script>
 
 </body>

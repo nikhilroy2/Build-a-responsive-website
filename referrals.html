@@ -281,7 +281,9 @@
                         </div>
                     </div>
                 </div>
-                <form action="" method="post" class="row mt-1 p-3 p-md-4 shadow-3 bg-white rounded_45">
+                <form action="" method="post" onsubmit="return partnerForm(this)"
+                    class="row mt-1 p-3 p-md-4 shadow-3 bg-white rounded_45">
+
                     <div class="col-md-6">
                         <div class="col__wrapper ">
                             <div class="form-outline form_outline_custom mb-4 border-0 shadow-0 rounded-3 outline-0">
@@ -311,7 +313,7 @@
                                 <i class="fas fa-map-marker-alt trailing"></i>
                                 <input type="text"
                                     class="form-control px-3 px-md-4 form-icon-trailing border-0 shadow-0 outline-0 p-3"
-                                    placeholder="Phone" name="Company/Agency" />
+                                    placeholder="Company/Agency" name="company_agency" />
                             </div>
                         </div>
                     </div>
@@ -323,6 +325,7 @@
                             </button>
                         </div>
                     </div>
+
                 </form>
             </div>
         </section>
@@ -369,7 +372,7 @@
                             <h2 class="font_size_35 family_panton text_title">
                                 SOME SAMPLE NUMBERS
                             </h2>
-                            <form action="" method="post" class="my-3 my-md-5">
+                            <form action="" onsubmit="return sampleNumForm(this)" method="post" class="my-3 my-md-5">
                                 <div class="form__wrapper__group">
                                     <h4 class="family_panton text_title font_size_25 ms-n3 mb-3">
                                         Your info (Referrer)
@@ -377,23 +380,23 @@
                                     <div
                                         class="form-outline form_outline_custom mb-4 border-0 shadow-0 rounded-3 outline-0">
                                         <i class="far fa-user trailing"></i>
-                                        <input type="text"
+                                        <input type="text" required
                                             class="form-control px-3 px-md-4 form-icon-trailing border-0 shadow-0 outline-0 p-3"
-                                            placeholder="Name" name="name" />
+                                            placeholder="Name" name="your_name" />
                                     </div>
                                     <div
                                         class="form-outline form_outline_custom mb-4 border-0 shadow-0 rounded-3 outline-0">
                                         <i class="far fa-paper-plane trailing"></i>
-                                        <input type="email"
+                                        <input type="email" required
                                             class="form-control px-3 px-md-4 form-icon-trailing border-0 shadow-0 outline-0 p-3"
-                                            placeholder="Email" name="email" />
+                                            placeholder="Email" name="your_email" />
                                     </div>
                                     <div
                                         class="form-outline form_outline_custom mb-4 border-0 shadow-0 rounded-3 outline-0">
                                         <i class="fas fa-phone-alt trailing"></i>
-                                        <input type="number"
+                                        <input type="number" required
                                             class="form-control px-3 px-md-4 form-icon-trailing border-0 shadow-0 outline-0 p-3"
-                                            placeholder="Phone" name="phone" />
+                                            placeholder="Phone" name="your_phone" />
                                     </div>
                                 </div>
 
@@ -404,23 +407,23 @@
                                     <div
                                         class="form-outline form_outline_custom mb-4 border-0 shadow-0 rounded-3 outline-0">
                                         <i class="far fa-user trailing"></i>
-                                        <input type="text"
+                                        <input type="text" required
                                             class="form-control px-3 px-md-4 form-icon-trailing border-0 shadow-0 outline-0 p-3"
-                                            placeholder="Name" name="name_leadInfo" />
+                                            placeholder="Name" name="lead_name" />
                                     </div>
                                     <div
                                         class="form-outline form_outline_custom mb-4 border-0 shadow-0 rounded-3 outline-0">
                                         <i class="far fa-paper-plane trailing"></i>
-                                        <input type="email"
+                                        <input type="email" required
                                             class="form-control px-3 px-md-4 form-icon-trailing border-0 shadow-0 outline-0 p-3"
-                                            placeholder="Email" name="email_leadInfo" />
+                                            placeholder="Email" name="lead_email" />
                                     </div>
                                     <div
                                         class="form-outline form_outline_custom mb-4 border-0 shadow-0 rounded-3 outline-0">
                                         <i class="fas fa-phone-alt trailing"></i>
-                                        <input type="number"
+                                        <input type="number" required
                                             class="form-control px-3 px-md-4 form-icon-trailing border-0 shadow-0 outline-0 p-3"
-                                            placeholder="Phone" name="phone_leadInfo" />
+                                            placeholder="Phone" name="lead_phone" />
                                     </div>
                                 </div>
                                 <div class="form__wrapper__group">
@@ -430,16 +433,16 @@
 
                                     <div class="form-check">
                                         <label class="form-check-label font_size_11">
-                                            <input type="checkbox"
-                                                class="form-check-input input_checked_orange text_orange" name="" id=""
-                                                value="checkedValue" checked>
+                                            <input type="checkbox" checked 
+                                                class="form-check-input input_checked_orange text_orange"
+                                                name="permission_check" id="">
                                             I got this person's permission to have UTZ Property Management contact them.
                                         </label>
                                     </div>
                                     <div
                                         class="form-outline mt-3 mt-md-4 form_outline_custom mb-4 border-0 shadow-0 rounded-3 outline-0">
                                         <i class="far fa-envelope trailing" style="top: 15%"></i>
-                                        <textarea
+                                        <textarea required
                                             class="form-control px-3 px-md-4 form-icon-trailing border-0 shadow-0 outline-0 p-3"
                                             rows="8" placeholder="Message" name="message">Message</textarea>
                                     </div>
@@ -514,8 +517,89 @@
     <script src="js/jqueryScript.js"></script>
     <!-- customScript -->
     <script src="js/customScript.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
 
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAyMNV03YfI9x86e0G1PTkycAfWBQavXAM",
+            authDomain: "mint-management.firebaseapp.com",
+            projectId: "mint-management",
+            storageBucket: "mint-management.appspot.com",
+            messagingSenderId: "35807825117",
+            appId: "1:35807825117:web:e10487cb7ee37689e4df34",
+            measurementId: "G-6X90CGLFJF"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        let firestore = firebase.firestore()
+        //console.log(db)
+        function partnerForm(val) {
+            event.preventDefault()
+            // console.log(event.target['name'])
+            const db_partner = firestore.collection('partner_make_money_db')
+            let nameValue = event.target['name'].value;
+            let emailValue = event.target['email'].value;
+            let phoneValue = event.target['phone'].value;
+            let company_agency = event.target['company_agency'].value;
+            db_partner.doc().set({
+                name: nameValue,
+                email: emailValue,
+                phone: phoneValue,
+                company_agency: company_agency,
+                created_at: new Date()
+            }).then(() => {
+                let h3 = document.createElement('h3')
+                h3.classList.add('text-success')
+                h3.classList.add('text-center')
+                h3.classList.add('my-3')
+                h3.innerHTML = 'Thanks, form submit successfully.'
+                val.appendChild(h3)
+                console.log("data saved")
+            }).catch(error => {
+                console.log(error)
+            })
+        }
 
+        function sampleNumForm(val) {
+            event.preventDefault();
+            const sample_num_db = firestore.collection('some_sample_num_db')
+            let yourNameValue = event.target['your_name'].value;
+            let yourEmailValue = event.target['your_email'].value;
+            let yourPhoneValue = event.target['your_phone'].value;
+            let leadNameValue = event.target['lead_name'].value;
+            let leadEmailValue = event.target['lead_email'].value;
+            let leadPhoneValue = event.target['lead_phone'].value;
+            let permissionCheck = event.target['permission_check'];
+            let check_permission;
+            permissionCheck.checked ? check_permission = true : check_permission = false
+            let messageValue = event.target['message'].value;
+            sample_num_db.doc().set({
+                your_name: yourNameValue,
+                your_email: yourEmailValue,
+                your_phone: yourPhoneValue,
+                lead_name: leadNameValue,
+                lead_email: leadEmailValue,
+                lead_phone: leadPhoneValue,
+                get_permission: check_permission,
+                message: messageValue,
+                created_at: new Date()
+            }).then(() => {
+                let h3 = document.createElement('h3')
+                h3.classList.add('text-success')
+                h3.classList.add('text-center')
+                h3.classList.add('my-3')
+                h3.innerHTML = 'Thanks, form submit successfully.'
+                val.appendChild(h3)
+                console.log("data saved")
+            }).catch(error => {
+                console.log(error)
+            })
+        }
+    </script>
 </body>
 
 </html>

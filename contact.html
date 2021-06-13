@@ -390,17 +390,18 @@
         // Your web app's Firebase configuration
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         var firebaseConfig = {
-            apiKey: "AIzaSyBrNk9z0UFtWt3YNq3aF2Wkr3sJhB3dJMc",
-            authDomain: "mint-project-533bd.firebaseapp.com",
-            projectId: "mint-project-533bd",
-            storageBucket: "mint-project-533bd.appspot.com",
-            messagingSenderId: "133219722896",
-            appId: "1:133219722896:web:22016e965754c77f6dda15"
+            apiKey: "AIzaSyAyMNV03YfI9x86e0G1PTkycAfWBQavXAM",
+            authDomain: "mint-management.firebaseapp.com",
+            projectId: "mint-management",
+            storageBucket: "mint-management.appspot.com",
+            messagingSenderId: "35807825117",
+            appId: "1:35807825117:web:e10487cb7ee37689e4df34",
+            measurementId: "G-6X90CGLFJF"
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         let firestore = firebase.firestore()
-        const db = firestore.collection('mint_db')
+        const db = firestore.collection('contact_form_db')
         //console.log(db)
         function contactForm(val) {
             event.preventDefault()
@@ -415,7 +416,8 @@
                 email: emailValue,
                 phone: phoneValue,
                 inquiry_type: inquiry_typeValue,
-                message: messageValue
+                message: messageValue,
+                created_at: new Date()
             }).then(() => {
                 let h3 = document.createElement('h3')
                 h3.classList.add('text-success')
@@ -428,7 +430,6 @@
             })
         }
     </script>
-
 </body>
 
 </html>
