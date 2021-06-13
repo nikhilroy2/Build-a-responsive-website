@@ -343,6 +343,10 @@ section.section__saying__slider {
 }
 footer {
   position: relative;
+  background: url("../img/map.svg"), url("../img/footer.svg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
   .design__oval {
     position: absolute;
     left: 0;

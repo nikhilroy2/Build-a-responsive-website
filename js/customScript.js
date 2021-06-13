@@ -11,4 +11,3 @@ function myFunction(x) {
 
   myFunction(window.matchMedia("(max-width: 1280px)")) // Call listener function at run time
   myFunction(window.matchMedia("(max-width: 1000px)")) // Call listener function at run time
-  //x.addListener(myFunction) // Attach listener function on state changes
