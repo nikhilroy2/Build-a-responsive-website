@@ -210,26 +210,26 @@
                     </div>
                     <div class="col-lg-5 mb-3 h-auto">
                         <div class="w-100 mt-3 mt-md-5 mb-3 h-100">
-                            <form action="" method="post"
+                            <form action="" method="post" onsubmit="return contactForm(this)"
                                 class="bg-white shadow-1 h-100 rounded_45 px-3 px-md-4 py-3 py-md-5">
                                 <div
                                     class="form-outline form_outline_custom mb-4 border-0 shadow-0 rounded-3 outline-0">
                                     <i class="far fa-user trailing"></i>
-                                    <input type="text"
+                                    <input type="text" required
                                         class="form-control px-3 px-md-4 form-icon-trailing border-0 shadow-0 outline-0 p-3"
                                         placeholder="Name" name="name" />
                                 </div>
                                 <div
                                     class="form-outline form_outline_custom mb-4 border-0 shadow-0 rounded-3 outline-0">
                                     <i class="far fa-paper-plane trailing"></i>
-                                    <input type="email"
+                                    <input type="email" required
                                         class="form-control px-3 px-md-4 form-icon-trailing border-0 shadow-0 outline-0 p-3"
                                         placeholder="Email" name="email" />
                                 </div>
                                 <div
                                     class="form-outline form_outline_custom mb-4 border-0 shadow-0 rounded-3 outline-0">
                                     <i class="fas fa-phone-alt trailing"></i>
-                                    <input type="number"
+                                    <input type="number" required
                                         class="form-control px-3 px-md-4 form-icon-trailing border-0 shadow-0 outline-0 p-3"
                                         placeholder="Phone" name="phone" />
                                 </div>
@@ -237,19 +237,19 @@
                                     class="form-outline form_outline_custom mb-4 border-0 shadow-0 rounded-3 outline-0">
                                     <input type="hidden" class="form-control d-none"> <!-- for validatoin class -->
                                     <i class="fas fa-map-marker-alt trailing"></i>
-                                    <select
+                                    <select name="inquiry_type" required
                                         class="form-control px-3 px-md-4 form-icon-trailing border-0 shadow-0 outline-0 p-3">
                                         <option selected disabled value="0">Inquiry Type</option>
-                                        <option value="1"> Inquiry 1</option>
-                                        <option value="2"> Inquiry 2</option>
-                                        <option value="3">Inquiry 3</option>
-                                        <option value="4"> Inquiry 4</option>
+                                        <option value="Inquiry 1"> Inquiry 1</option>
+                                        <option value="Inquiry 2"> Inquiry 2</option>
+                                        <option value="Inquiry 3">Inquiry 3</option>
+                                        <option value="Inquiry 4"> Inquiry 4</option>
                                     </select>
                                 </div>
                                 <div
                                     class="form-outline form_outline_custom mb-4 border-0 shadow-0 rounded-3 outline-0">
                                     <i class="far fa-envelope trailing" style="top: 15%"></i>
-                                    <textarea
+                                    <textarea required
                                         class="form-control px-3 px-md-4 form-icon-trailing border-0 shadow-0 outline-0 p-3"
                                         rows="8" placeholder="Message" name="message">Message</textarea>
                                 </div>
@@ -311,7 +311,7 @@
                                     NEED MAP <br> HERE
                                 </span>
                                 <br>
-                               
+
                                 <span class="d-inline-block mb-3">
                                     THEN LIVE <br> GOOGLE <br> REVIEWS
                                 </span>
@@ -379,6 +379,55 @@
     <!-- customScript -->
     <script src="js/customScript.js"></script>
 
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBrNk9z0UFtWt3YNq3aF2Wkr3sJhB3dJMc",
+            authDomain: "mint-project-533bd.firebaseapp.com",
+            projectId: "mint-project-533bd",
+            storageBucket: "mint-project-533bd.appspot.com",
+            messagingSenderId: "133219722896",
+            appId: "1:133219722896:web:22016e965754c77f6dda15"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        let firestore = firebase.firestore()
+        const db = firestore.collection('mint_db')
+        //console.log(db)
+        function contactForm(val) {
+            event.preventDefault()
+            // console.log(event.target['name'])
+            let nameValue = event.target['name'].value;
+            let emailValue = event.target['email'].value;
+            let phoneValue = event.target['phone'].value;
+            let inquiry_typeValue = event.target['inquiry_type'].value;
+            let messageValue = event.target['message'].value;
+            db.doc().set({
+                name: nameValue,
+                email: emailValue,
+                phone: phoneValue,
+                inquiry_type: inquiry_typeValue,
+                message: messageValue
+            }).then(() => {
+                let h3 = document.createElement('h3')
+                h3.classList.add('text-success')
+                h3.classList.add('my-3')
+                h3.innerHTML = 'Thanks, form submit successfully.'
+                val.appendChild(h3)
+                console.log("data saved")
+            }).catch(error => {
+                console.log(error)
+            })
+        }
+    </script>
 
 </body>
 
