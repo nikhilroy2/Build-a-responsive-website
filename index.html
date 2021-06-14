@@ -594,7 +594,7 @@
                             <div class="form-group">
                                 <button type="submit"
                                     class="btn font_size_20 h-100 bg_orange text-white rounded-pill py-md-3 px-md-5 text-capitalize">
-                                    Subscribe
+                                    Submit
                                 </button>
                             </div>
                         </form>
@@ -711,6 +711,13 @@
     <!-- customScript -->
     <script src="js/customScript.js"></script>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+   <!-- emailjs -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
+
     <!-- Initialize Swiper -->
     <script>
         new Swiper(".swiper__driven", {
@@ -745,14 +752,13 @@
                 prevEl: ".swiper-button-prev",
             },
         });
+
+
     </script>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
 
     <script>
-        // Your web app's Firebase configuration
+         // Your web app's Firebase configuration
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         var firebaseConfig = {
             apiKey: "AIzaSyAyMNV03YfI9x86e0G1PTkycAfWBQavXAM",
@@ -766,27 +772,51 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         let firestore = firebase.firestore()
-        const db = firestore.collection('subcribe_email_db')
-        //console.log(db)
+        
         function EmailForm(val) {
-            event.preventDefault()
-            // console.log(event.target['name'])
+            event.preventDefault();
+            const db = firestore.collection('subcribe_email_db')
             let emailValue = event.target['email'].value;
+
             db.doc().set({
                 email: emailValue,
                 created_at: new Date()
             }).then(() => {
                 let h3 = document.createElement('h3')
                 h3.classList.add('text-success')
+                h3.classList.add('text-center')
                 h3.classList.add('my-3')
-                h3.innerHTML = 'Thanks for your email'
+                h3.innerHTML = 'Thanks, form submit successfully.'
                 val.appendChild(h3)
                 console.log("data saved")
             }).catch(error => {
                 console.log(error)
             })
+            // email receiving......
+            emailjs.init("user_IK2OvtvR179lQLuilVcTG");
+            let templateParams = {
+                //name: 'James',
+                //to_name: nameValue,
+                //from_name: 'mint team',
+                //notes: 'Check this out!',
+                message: `
+                Index page form:
+                email: ${emailValue}
+                ,
+                `
+            };
+            emailjs.send('service_o99410i', 'template_9nemryk', templateParams)
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text, response);
+                }, function (error) {
+                    console.log('FAILED...', error);
+                });
+
         }
     </script>
+
+
+
 
 </body>
 
